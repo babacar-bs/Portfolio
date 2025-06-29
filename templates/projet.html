@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projets – Babacar SARR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/log.ico')}}" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/projets.css') }}" />
+</head>
+<body>
+
+<header>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+  <nav class="nav-desktop">
+    <ul class="nav-links">
+      <li><a href="/" class="{{ 'active-link' if request.path == '/' else '' }}">Accueil</a></li>
+      <li><a href="/cv" class="{{ 'active-link' if request.path == '/cv' else '' }}">CV</a></li>
+      <li><a href="/projets" class="{{ 'active-link' if request.path == '/projets' else '' }}">Projets</a></li>
+    </ul>
+    <ul class="iconslist4">
+      <li class="icons">
+        <a href="https://linkedin.com/in/babacar-s" target="_blank">
+          <img src="{{ url_for('static', filename='img/linkedin_icon.png') }}" alt="LinkedIn" />
+        </a>
+      </li>
+      <li class="email"><a href="mailto:b26.sarr@gmail.com">b26.sarr@gmail.com</a></li>
+    </ul>
+  </nav>
+
+  <nav class="nav-menu" id="navMenu">
+    <ul class="nav-links">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/cv">CV</a></li>
+      <li><a href="/projets" class="active-link">Projets</a></li>
+    </ul>
+    <ul class="iconslist3">
+      <li class="icons">
+        <a href="https://linkedin.com/in/babacar-s" target="_blank">
+          <img src="{{ url_for('static', filename='img/linkedin_icon.png') }}" alt="LinkedIn" />
+        </a>
+      </li>
+      <li class="email"><a href="mailto:b26.sarr@gmail.com">b26.sarr@gmail.com</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Mes Projets</h1>
+
+  {% for projet in projets %}
+  <section class="project">
+    <div class="project-gallery">
+      <div class="gallery-container">
+        <a href="{{ url_for('static', filename=projet.medias[0].src) }}"
+           class="glightbox{{ projet.id }}"
+           data-gallery="gallery{{ projet.id }}">
+          <img src="{{ url_for('static', filename=projet.medias[0].src) }}" alt="Preview" />
+          <div class="overlay">
+            <div class="zoom-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
+                <path d="M10 2a8 8 0 105.293 14.293l5.707 5.707-1.414 1.414-5.707-5.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
+              </svg>
+              <span>Plus de détails...</span>
+            </div>
+          </div>
+        </a>
+
+        {% for media in projet.medias[1:] %}
+          <a href="{{ url_for('static', filename=media.src) }}"
+             class="glightbox{{ projet.id }}"
+             data-gallery="gallery{{ projet.id }}"
+             {% if media.type == 'video' %}data-type="video"{% endif %}
+             style="display: none;"></a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="project-details">
+      <h2>{{ projet.titre }}</h2>
+      {% if projet.associe %}
+      <p class="associe">{{ projet.associe }}</p>
+      {% endif %}
+      <p class="description">{{ projet.description }}</p>
+      <p class="competences">{{ projet.competences }}</p>
+      <p class="competences">
+        <a href="#" onclick="document.querySelector('.glightbox{{ projet.id }}').click(); return false;">
+            Plus de détails
+        </a>
+      </p>
+
+
+      {% if projet.lien %}
+        <p class="lien-projet">
+          <a href="{{ projet.lien }}" target="_blank" rel="noopener noreferrer">🔗 Voir le projet</a>
+        </p>
+      {% endif %}
+    </div>
+  </section>
+  {% endfor %}
+</main>
+
+<footer>
+  <p>© Babacar SARR</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  {% for projet in projets %}
+    GLightbox({ selector: '.glightbox{{ projet.id }}' });
+  {% endfor %}
+</script>
+
+</body>
+</html>

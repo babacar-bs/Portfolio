@@ -1,0 +1,384 @@
+/* ======== Polices personnalisées ======== */
+@font-face {
+  font-family: mundial;
+  src: url('font/MundialHair.otf');
+}
+
+@font-face {
+  font-family: neue-haas-grotesk-display;
+  src: url('font/NeueHaasDisplay/NeueHaasDisplayBold.ttf');
+}
+
+li.email {
+  list-style-type: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f1f0;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
+  overflow-x: hidden;
+  color: #1a1919;
+}
+
+.active-link{
+  color: red;
+}
+
+/* ======== Canvas ======== */
+canvas {
+  opacity: 0.4;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #25003a01;
+  overflow: hidden;
+  display: block;
+  z-index: 2;
+}
+
+/* ======== Header ======== */
+header {
+  background-color: #f2f1f0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+.nav-desktop {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-desktop .nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-desktop .nav-links li a {
+  font-size: 18px;
+  color: #918f8e;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
+}
+
+.nav-desktop .nav-links li a:hover,
+.nav-desktop .nav-links li a.active-link {
+  color: #f45221;
+  font-weight: bold;
+}
+
+/* ======== Icônes (desktop) ======== */
+.iconslist4 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+}
+
+.iconslist4 .icons {
+  display: flex;
+  gap: 15px;
+}
+
+.iconslist4 .icons a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.iconslist4 .icons a img:hover {
+  transform: scale(1.2);
+}
+
+.iconslist4 .email a {
+  font-size: 16px;
+  color: #918f8e;
+}
+
+.iconslist4 .email a:hover {
+  color: #f45221;
+}
+
+/* ======== Menu Mobile ======== */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f2f1f0;
+    width: 70%;
+    height: 100vh;
+    padding: 80px 20px 20px 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-menu .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    width: 100%;
+  }
+
+  .nav-menu .nav-links li a {
+    display: block;
+    padding: 12px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .nav-menu .nav-links li a:hover {
+    color: #f45221;
+  }
+
+  .iconslist3 {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .iconslist3 img {
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3s ease;
+  }
+
+  .iconslist3 img:hover {
+    transform: scale(1.2);
+  }
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #918f8e;
+}
+header a {
+  text-decoration: none;
+}
+.nav-menu li,
+.iconlist4 li,
+ul.no-bullets li {
+  list-style: none;
+}
+
+
+/* ___________________________________________________________________________ */
+/* ----- Structure principale ----- */
+main.container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+main.container h1 {
+  font-size: 2.8em;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #1a2d40;
+}
+
+/* ----- Projet en carte ----- */
+section.project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 60px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+section.project:hover {
+  transform: translateY(-3px);
+}
+
+/* ----- Galerie ----- */
+.project-gallery {
+  flex: 1 1 300px;
+  min-width: 280px;
+  position: relative;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.gallery-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 45, 64, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-container:hover .overlay {
+  opacity: 1;
+}
+
+.zoom-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.zoom-icon svg {
+  margin-bottom: 6px;
+}
+
+/* ----- Détails projet ----- */
+.project-details {
+  flex: 2 1 400px;
+  padding: 20px 30px;
+}
+
+.project-details h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #1a2d40;
+}
+
+.project-details .associe {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.project-details .description {
+  font-size: 1.05em;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.project-details .competences {
+  font-size: 0.95em;
+  color: #555;
+  background: #eef3f7;
+  padding: 10px 14px;
+  border-left: 4px solid #1a2d40;
+  border-radius: 4px;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  section.project {
+    flex-direction: column;
+  }
+
+  .project-details {
+    padding: 20px;
+  }
+
+  .project-details h2 {
+    font-size: 1.5em;
+  }
+}
+
+
+.lien-projet a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.lien-projet a:hover {
+  color: #104e8b;
+  text-decoration: underline;
+}
+
+
+.project-details .description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Responsive: petits écrans */
+@media screen and (max-width: 768px) {
+  .project-details .description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* Très petits écrans */
+@media screen and (max-width: 480px) {
+  .project-details .description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+.project-details .description {
+  white-space: pre-line; /* Respecte les \n ou <br> */
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" href="img/log.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/log.ico')}}" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/r3.css')}}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/indexx.css')}}"> -->
+    <style>
+    
+
+    </style>
+    <title>RESUME</title>
+</head>
+<body>
+
+
+  <header>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+  <nav class="nav-desktop">
+    <ul class="nav-links">
+      <li><a href="/" class="{{ 'active-link' if request.path == '/' else '' }}">Accueil</a></li>
+      <li><a href="/cv" class="{{ 'active-link' if request.path == '/cv' else '' }}">CV</a></li>
+      <li><a href="/projets" class="{{ 'active-link' if request.path == '/projets' else '' }}">Projets</a></li>
+    </ul>
+    <ul class="iconslist4">
+      <li class="icons">
+        <a href="http://www.linkedin.com/in/babacar-s" target="_blank"><img src="{{ url_for('static', filename='img/linkedin_icon.png')}}" alt="LinkedIn"></a>
+        <!-- <a href="#"><img src="{{ url_for('static', filename='img/discord_icon.png')}}" alt="Discord"></a> -->
+      </li>
+      <li class="email">
+        <a href="mailto:b26.sarr@gmail.com">b26.sarr@gmail.com</a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="nav-menu" id="navMenu">
+    <ul class="nav-links">
+      <li><a href="/" class="{{ 'active-link' if request.path == '/' else '' }}">Accueil</a></li>
+      <li><a href="/cv" class="{{ 'active-link' if request.path == '/cv' else '' }}">CV</a></li>
+      <li><a href="/projets" class="{{ 'active-link' if request.path == '/projets' else '' }}">Projets</a></li>
+    </ul>
+    <ul class="iconslist3">
+      <li>
+        <a href="http://www.linkedin.com/in/babacar-s" target="_blank"><img src="{{ url_for('static', filename='img/linkedin_icon.png')}}" alt="LinkedIn"></a>
+        <a href="#"><img src="{{ url_for('static', filename='img/github_icon.png')}}" alt="GitHub"></a>
+        <a href="#"><img src="{{ url_for('static', filename='img/discord_icon.png')}}" alt="Discord"></a>
+      </li>
+      <li class="email" style="text-decoration: none">
+        <a href="mailto:b26.sarr@gmail.com">b26.sarr@gmail.com</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+
+  <main class="cv-container">
+
+    <!-- FORMATION -->
+    <h2>Formations</h2>
+    <br/>
+    <section class="cv-section">
+      <div class="cv-logo">
+        <img src="{{ url_for('static', filename='img/ul.png') }}" alt="Université de Lorraine" />
+      </div>
+      <div class="cv-content">
+        <h3>Université de Lorraine <br>(Metz, France)</h3>
+        <p>Master en Systèmes d'Information Décisionnelle | 2023 - Aujourd'hui</p>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <div class="cv-logo">
+        <img src="{{ url_for('static', filename='img/uca.png') }}" alt="Université Clermont Auvergne" />
+      </div>
+      <div class="cv-content">
+        <h3>Université Clermont Auvergne <br>(Clermont-Ferrand, France)</h3>
+        <p>Licence en Informatique | 2021 - 2023</p>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <div class="cv-logo">
+        <img src="{{ url_for('static', filename='img/esp.png') }}" alt="ESP Dakar" />
+      </div>
+      <div class="cv-content">
+        <h3>École Supérieure Polytechnique <br>(Dakar, Sénégal)</h3>
+        <p>DUT en Informatique | 2019 - 2021</p>
+      </div>
+    </section>
+    
+    <hr/>
+
+    <!-- EXPERIENCE -->
+    <h2>Experiences</h2>
+    <br/>
+    <section class="cv-section">
+      <div class="cv-logo">
+        <img src="{{ url_for('static', filename='img/impact.png') }}" alt="IM-PACT" />
+      </div>
+      <div class="cv-content">
+        <h3>IM-PACT <br>(Clermont-Ferrand / France)</h3>
+        <p>Mise en place de processus automatisés pour alimenter des solutions de BI<br/>
+        Mars 2025 - Aujourd'hui</p>
+        <ul>
+            <li>Conceptions de Dashboards avec Power BI et SeveUp</li>
+            <li>Développement de ChatBot pour vérifier les maquettes BIM, pour la création de fichier IDS et l'écriture de Dax et regex</li>
+            <li>Automatisation des processus de verifications des permis de construire</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <div class="cv-logo">
+        <img src="{{ url_for('static', filename='img/prose.png') }}" alt="ProSE SARL" />
+      </div>
+      <div class="cv-content">
+        <h3>ProSE SARL <br>(Dakar / Sénégal)</h3>
+        <p>
+          Juin 2021 - Août 2021<br/>
+          Développement d’un système de suivi en temps réel des niveaux d’eau
+          <ul>
+            <li>État de l’art des solutions existantes</li>
+            <li>Benchmarking des dispositifs de collecte et télémétrie</li>
+            <li>Dashboard d’alerte en temps réel multi-zones</li>
+          </ul>
+        </p>
+      </div>
+    </section>
+
+
+<hr/>
+<h2>Compétences techniques (actuellement utilisées)</h2>
+<section class="skills-grid">
+  {% for skill in current_skills %}
+    <div class="skill-item">
+      <img src="{{ url_for('static', filename='img/skills/' + skill.logo) }}" alt="{{ skill.name }}"><br>
+      <span>{{ skill.name }}</span>
+    </div>
+  {% endfor %}
+</section>
+
+<h2>Autres compétences techniques</h2>
+<section class="skills-grid">
+  {% for skill in past_skills %}
+    <div class="skill-item">
+      <img src="{{ url_for('static', filename='img/skills/' + skill.logo) }}" alt="{{ skill.name }}"><br>
+      <span>{{ skill.name }}</span>
+    </div>
+  {% endfor %}
+</section>
+
+<h2>Certifications</h2>
+<section class="skills-grid">
+  {% for cert in certifications %}
+    <div class="skill-item">
+      <img src="{{ url_for('static', filename=cert.logo) }}" alt="{{ cert.name }}"><br>
+      <span>{{ cert.name }}</span>
+    </div>
+  {% endfor %}
+</section>
+
+
+  </main>
+  <footer>
+    &copy; Babacar SARR
+  </footer>
+
+
+  <!--canva1--> 
+    <canvas></canvas>
+    <!--FIN--> 
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script  src="{{ url_for('static', filename='js/index.js')}}"></script>
+    <script  src="{{ url_for('static', filename='js/background.js')}}"></script>
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+</body>
+</html>

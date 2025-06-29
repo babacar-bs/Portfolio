@@ -1,0 +1,358 @@
+/* ===========================
+   Styles généraux
+=========================== */
+@font-face {
+  font-family: mundial;
+  src: url(font/MundialHair.otf);
+}
+@font-face {
+  font-family: neue-haas-grotesk-display;
+  src: url(font/NeueHaasDisplay/NeueHaasDisplayBold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f1f0;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.active li{
+    text-decoration: none;
+}
+.active-link {
+  color: red !important; /* Change la couleur en rouge */
+  font-weight: bold; /* Mets le texte en gras pour plus de visibilité */
+}
+
+.iconslist3 li, .iconslist4 li{
+    text-decoration: none;
+}
+
+.nav-menu{
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0; /* Pour enlever l’indentation */
+}
+
+/* ===========================
+   Icônes de contact alignées à droite
+=========================== */
+.iconslist4 {
+  display: flex;
+  justify-content: flex-end;  /* Aligner à droite */
+  gap: 20px;  /* Espacement entre les icônes */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;  /* Centrer verticalement */
+}
+
+.iconslist4 .icons {
+  display: flex;
+  gap: 15px;  /* Espacement entre les icônes */
+}
+
+.iconslist4 .icons a img {
+  width: 30px;  /* Taille des icônes */
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.iconslist4 .icons a img:hover {
+  transform: scale(1.2);  /* Effet de zoom au survol */
+}
+
+.iconslist4 .email a {
+  font-size: 16px;
+  color: #918f8e;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
+}
+
+.iconslist4 .email a:hover {
+  color: #f45221;  /* Changer la couleur au survol */
+}
+
+/* ===========================
+   Canvas en background
+=========================== */
+canvas {
+  opacity: 0.4;
+  position: fixed;
+  top: 0; bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #25003a01;
+  overflow: hidden;
+  display: block;
+  z-index: 2;
+}
+
+/* ===========================
+   Header
+=========================== */
+header {
+  background-color: #f2f1f0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+.header_leftPart h1 {
+  font-size: 28px;
+}
+
+.nav-desktop {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-desktop .nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-desktop .nav-links li a {
+  font-size: 18px;
+  color: #918f8e;
+  font-family: 'neue-haas-grotesk-display', sans-serif;
+}
+
+.nav-desktop .nav-links li a:hover {
+  color: #f45221;
+  cursor: pointer;
+}
+
+/* Hamburger menu (mobile) */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ===========================
+   Menu mobile (slide-in à gauche)
+=========================== */
+.nav-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f2f1f0;
+    width: 70%;
+    height: 100vh;
+    padding: 80px 20px 20px 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .nav-menu .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .nav-menu .nav-links li {
+    width: 100%;
+  }
+
+  .nav-menu .nav-links li a {
+    display: block;
+    padding: 12px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .nav-menu .nav-links li a:hover {
+    color: #f45221;
+  }
+
+  /* Icones sociales */
+  .iconslist3 {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .iconslist3 img {
+    height: 30px;
+    width: 30px;
+    transition: transform 0.3s ease;
+  }
+
+  .iconslist3 img:hover {
+    transform: scale(1.2);
+  }
+}
+
+/* ===========================
+   Main (nom, prénom, présentation)
+=========================== */
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+main .prenom h1,
+main .nom h1 {
+  font-family: 'mundial', sans-serif;
+  font-size: 130px;
+  line-height: 1;
+  color: #1a1919;
+}
+
+.presentation {
+  font-size: 24px;
+  max-width: 900px;
+  margin: 60px auto 40px;
+  text-align: center;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+/* ===========================
+   Projets
+=========================== */
+.preview-projets {
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.preview-projets h2 {
+  font-family: 'mundial', sans-serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.projets-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.projet {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  max-width: 380px;
+  width: 100%;
+  text-align: left;
+}
+
+.projet h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.projet p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Bouton CV */
+.btn-cv {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  border: 1px solid #1a1919;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #1a1919;
+  transition: background 0.3s ease;
+}
+
+.btn-cv:hover {
+  background: #1a1919;
+  color: #fff;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  margin-top: 60px;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 992px) {
+  main .prenom h1,
+  main .nom h1 {
+    font-size: 80px;
+  }
+
+  .presentation {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  main .prenom h1,
+  main .nom h1 {
+    font-size: 52px;
+  }
+
+  .projet {
+    padding: 16px;
+  }
+
+  .btn-cv {
+    width: 100%;
+  }
+}

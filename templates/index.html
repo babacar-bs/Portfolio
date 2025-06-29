@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" href="img/log.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/log.ico')}}" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/indexx.css')}}">
+    
+</head>
+
+<body>
+
+<header>
+  <!-- Hamburger (mobile uniquement) -->
+  <div class="hamburger" id="hamburger">&#9776;</div>
+
+  <!-- Menu desktop (visible sur écran large, à gauche) -->
+  <nav class="nav-desktop">
+    <ul class="nav-links">
+      <li><a href="/"  class="{{ 'active-link' if request.path == '/' else '' }}">Accueil</a></li>
+      <li><a href="/cv"  class="{{ 'active-link' if request.path == '/cv' else '' }}">CV</a></li>
+      <li><a href="/projets"  class="{{ 'active-link' if request.path == '/projets' else '' }}">Projets</a></li>
+    </ul>
+    <ul class="iconslist4">
+      <li class="icons">
+        <a href="http://www.linkedin.com/in/babacar-s" target="_blank"><img src="{{ url_for('static', filename='img/linkedin_icon.png')}}" alt="LinkedIn"></a>
+        <!-- <a href="#" target="b2b_2b2"><img src="{{ url_for('static', filename='img/discord_icon.png')}}" alt="Discord"></a> -->
+      </li>
+      <li class="email">
+        <a href="mailto:b26.sarr@gmail.com">b26.sarr@gmail.com</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Menu mobile (glissant depuis la gauche) -->
+  <nav class="nav-menu" id="navMenu">
+    <ul class="nav-links">
+      <li><a href="/"  class="{{ 'active-link' if request.path == '/' else '' }}">Accueil</a></li>
+      <li><a href="/cv"  class="{{ 'active-link' if request.path == '/cv' else '' }}">CV</a></li>
+      <li><a href="/projets"  class="{{ 'active-link' if request.path == '/projets' else '' }}">Projets</a></li>
+    </ul>
+    <ul class="iconslist3">
+      <li>
+        <a href="http://www.linkedin.com/in/babacar-s" target="_blank"><img src="{{ url_for('static', filename='img/linkedin_icon.png')}}" alt="LinkedIn"></a>
+        <a href="#"><img src="{{ url_for('static', filename='img/github_icon.png')}}" alt="GitHub"></a>
+        <a href="#"><img src="{{ url_for('static', filename='img/discord_icon.png')}}" alt="Discord"></a>
+      </li>
+      <li class="email">
+        <a href="mailto:b26.sarr@gmail.com">b26.sarr@gmail.com</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+    <main>
+        <section class="prenom" data-aos="fade-up" data-aos-delay= "150" data-aos-duration = "600">
+            <h1>BABACAR</h1>
+        </section>
+        <section class="nom" data-aos="fade-up" data-aos-delay= "350" data-aos-duration = "600">
+            <h1>SARR</h1>
+        </section>
+    </main>
+    <br><br><br><br><br>
+    <!-- <p class="presentation">👋 Je suis Babacar SARR, étudiant en dernière année de Master Informatique Décisionnelle à l'Université de Lorraine. Passionné par la data, l'IA et la valorisation des données, je conçois des solutions innovantes pour transformer l'information en décision. <br> Ce portfolio présente mes projets, mes compétences et mon parcours.</p> -->
+    <p class="presentation">
+  👋<br>
+  Je suis <strong>Babacar SARR</strong>, étudiant en dernière année de Master 2 en Systèmes d'Information Décisionnelle à l’Université de Lorraine.
+  <br><br>
+  🎓 Actuellement en stage de fin d’études, j’applique mes compétences en <strong>analyse de données</strong>, <strong>business intelligence</strong>, <strong>optimisation</strong> et <strong>développement</strong> à des problématiques concrètes.
+  <br><br>
+  🚀 Mon objectif : créer de la valeur à partir des données et aider les organisations à prendre des décisions plus intelligentes et efficaces.
+  <br><br>
+  📅 Je serai disponible à partir de <strong>septembre 2025</strong> pour de nouvelles opportunités professionnelles.
+  <br><br>
+  💡 Ce portfolio présente quelques uns de mes projets, ainsi que mes compétences et mon parcours. Il me sert également de terrain d’expérimentation pour tester de nouvelles technologies <span style="white-space: nowrap;"> (il est donc en constante évolution).</span>
+  <br><br>
+  Bonne visite ! <em>(N’hésitez pas à me contacter.)</em>
+</p>
+
+
+
+    <section class="preview-projets" data-aos="fade-up" data-aos-delay="500">
+    <h2>Projets récents</h2>
+        <div class="projets-grid">
+            <div class="projet">
+            <h3>Analyse Prédictive de Ventes</h3>
+            <p>Projet de fin d'études utilisant Python, Scikit-learn et Dash pour prédire les ventes mensuelles d’une entreprise retail.</p>
+            </div>
+            <div class="projet">
+            <h3>Dashboard RH IA</h3>
+            <p>Développement d’un tableau de bord interactif avec Streamlit et GPT-4 pour analyser la satisfaction des employés à partir d’enquêtes.</p>
+            </div>
+        </div>
+        <a href="/projets" class="btn-cv">Voir tous les projets</a>
+    </section>
+    <footer>
+    &copy; Babacar SARR
+    </footer>
+
+    <!--canva1--> 
+    <canvas></canvas>
+    <!--FIN--> 
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        once: true // ✅ Les animations ne se jouent qu'une seule fois
+    });
+    </script>
+    <script  src="{{ url_for('static', filename='js/index.js')}}"></script>
+    <script  src="{{ url_for('static', filename='js/background.js')}}"></script>
+
+
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</body>
+
+</html>

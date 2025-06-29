@@ -79,9 +79,9 @@ def resume():
                            certifications=certifications)
 
 
-# @app.route('/projets')
-# def projets():
-#     projets = [
+# @app.route('/Projets')
+# def Projets():
+#     Projets = [
 #         {
 #             "titre": "Site web de location de voitures",
 #             "associe": "Ecole Supérieure Polytechnique de Dakar",
@@ -118,11 +118,11 @@ def resume():
 #             "image": "sentiments.png"
 #         }
 #     ]
-#     return render_template('projets.html', projets=projets)
+#     return render_template('Projets.html', Projets=Projets)
 
-@app.route('/projets')
+@app.route('/Projets')
 def projet():
-    projets_data = [
+    Projets_data = [
         {
             "id": "bigdata_hadoop",
             "titre": "Experience avec Spark et Power BI",
@@ -135,9 +135,9 @@ def projet():
             ),
             "competences": "Big Data · Spark · Power BI",
             "medias": [
-                {"type": "image", "src": "img/projets/p1-1.png"},
-                {"type": "image", "src": "img/projets/p1-2.png"},
-                {"type": "image", "src": "img/projets/p1-3.png"}
+                {"type": "image", "src": "img/Projets/p1-1.png"},
+                {"type": "image", "src": "img/Projets/p1-2.png"},
+                {"type": "image", "src": "img/Projets/p1-3.png"}
             ],
             "lien": "https://app.powerbi.com/view?r=eyJrIjoiM2Q0ZWQ1NTQtZTRlNi00ZDZkLWFhYjMtZTczZGQ0NzZhZTJhIiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"  # Remplace par l’URL réelle si tu l’as
         },
@@ -155,11 +155,11 @@ def projet():
     ),
     "competences": "Python · Scikit-learn · Librosa · Machine Learning ",
     "medias": [
-        {"type": "image", "src": "img/projets/a1.png"},
-        {"type": "image", "src": "img/projets/a2.png"},
-        {"type": "image", "src": "img/projets/a3.png"},
-        {"type": "image", "src": "img/projets/a4.png"},
-        {"type": "image", "src": "img/projets/a5.png"},
+        {"type": "image", "src": "img/Projets/a1.png"},
+        {"type": "image", "src": "img/Projets/a2.png"},
+        {"type": "image", "src": "img/Projets/a3.png"},
+        {"type": "image", "src": "img/Projets/a4.png"},
+        {"type": "image", "src": "img/Projets/a5.png"},
     ],
 },
 {
@@ -178,10 +178,10 @@ def projet():
     ),
     "competences": "Python · NLP · SVM · Scikit-learn · Apprentissage incrémental · Interfaces tactiles",
     "medias": [
-        {"type": "image", "src": "img/projets/as1.png"},
-        {"type": "image", "src": "img/projets/as2.png"},
-        {"type": "image", "src": "img/projets/as3.png"},
-        {"type": "image", "src": "img/projets/as4.png"},
+        {"type": "image", "src": "img/Projets/as1.png"},
+        {"type": "image", "src": "img/Projets/as2.png"},
+        {"type": "image", "src": "img/Projets/as3.png"},
+        {"type": "image", "src": "img/Projets/as4.png"},
     ],
 },
 
@@ -201,14 +201,14 @@ def projet():
             ),
             "competences": "Reporting · Power BI · DAX · Power Query ",
             "medias": [
-                {"type": "image", "src": "img/projets/h1-1.png"},
+                {"type": "image", "src": "img/Projets/h1-1.png"},
             ],
             "lien":"https://app.powerbi.com/view?r=eyJrIjoiYzFkNDE2ZTEtMzc5Yy00MzBkLWEyMjYtZjFhMGQ1ODdkYmQ1IiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"
         }
 
-        # Tu peux ajouter d'autres projets ici...
+        # Tu peux ajouter d'autres Projets ici...
     ]
-    return render_template("projet.html", projets=projets_data)
+    return render_template("projet.html", Projets=Projets_data)
 
 #MAIN
 if __name__ == "__main__":

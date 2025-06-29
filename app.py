@@ -79,9 +79,9 @@ def resume():
                            certifications=certifications)
 
 
-# @app.route('/Projets')
-# def Projets():
-#     Projets = [
+# @app.route('/projets')
+# def projets():
+#     projets = [
 #         {
 #             "titre": "Site web de location de voitures",
 #             "associe": "Ecole Supérieure Polytechnique de Dakar",
@@ -118,11 +118,11 @@ def resume():
 #             "image": "sentiments.png"
 #         }
 #     ]
-#     return render_template('Projets.html', Projets=Projets)
+#     return render_template('projets.html', projets=projets)
 
-@app.route('/Projets')
+@app.route('/projets')
 def projet():
-    Projets_data = [
+    projets_data = [
         {
             "id": "bigdata_hadoop",
             "titre": "Experience avec Spark et Power BI",
@@ -206,9 +206,9 @@ def projet():
             "lien":"https://app.powerbi.com/view?r=eyJrIjoiYzFkNDE2ZTEtMzc5Yy00MzBkLWEyMjYtZjFhMGQ1ODdkYmQ1IiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"
         }
 
-        # Tu peux ajouter d'autres Projets ici...
+        # Tu peux ajouter d'autres projets ici...
     ]
-    return render_template("projet.html", Projets=Projets_data)
+    return render_template("projet.html", projets=projets_data)
 
 #MAIN
 if __name__ == "__main__":

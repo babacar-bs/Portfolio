@@ -204,7 +204,34 @@ def projet():
                 {"type": "image", "src": "img/Projets/h1-1.png"},
             ],
             "lien":"https://app.powerbi.com/view?r=eyJrIjoiYzFkNDE2ZTEtMzc5Yy00MzBkLWEyMjYtZjFhMGQ1ODdkYmQ1IiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"
-        }
+        },
+        {
+    "id": "dgpre-eau",
+    "titre": "Suivi intelligent des ressources en eau au Sénégal",
+    "associe": "ProSE SARL / DGPRE",
+    "description": (
+        "Dans le cadre de mon stage de 2e année de DUT à ProSE SARL, mon binôme et moi avons développé une application "
+        "permettant à la DGPRE de suivre en temps réel les niveaux et débits d’eau des stations hydrologiques "
+        "du Sénégal. L’objectif était de remplacer les campagnes manuelles coûteuses par un système connecté "
+        "basé sur le dispositif LevelSender + Levelogger, capable de télétransmettre les données vers une base "
+        "de données et de générer des alertes automatiques en cas d’anomalie. Le système inclut une cartographie interactive "
+        "des points de mesure, un tableau de bord de suivi en temps réel et un module CRUD pour la gestion des stations."
+    ),
+    "competences": "Python · Flask · JavaScript · Leaflet.js · Highcharts · SQLite · UML · Dashboard · Télémetrie",
+    "medias": [
+        {"type": "image", "src": "img/Projets/s2.png"},
+        {"type": "image", "src": "img/Projets/s3.png"},
+        {"type": "image", "src": "img/Projets/s1.png"},
+        {"type": "image", "src": "img/Projets/s4.png"},
+        {"type": "image", "src": "img/Projets/s5.png"},
+        {"type": "image", "src": "img/Projets/s6.png"},
+        {"type": "image", "src": "img/Projets/s7.png"}
+
+        
+    ],
+}
+
+
 
         # Tu peux ajouter d'autres projets ici...
     ]

@@ -124,6 +124,27 @@ def resume():
 def projet():
     projets_data = [
         {
+            "id": "automatisation_permis",
+            "titre": "Automatisation de la vérification des permis de construire",
+            "associe": "SeveUp et A26 Architecture",
+            "description": (
+                "Ce projet visait à expérimenter l'automatisation du processus de vérification des permis de construire, "
+                "qui pouvait auparavant prendre jusqu’à 10 mois. Grâce à l’utilisation de SeveUp, "
+                "d’un programme développé sur mesure, et de Power BI pour la visualisation, nous avons réduit le temps "
+                "de traitement à seulement quelques minutes. Cette initiative modernise et fluidifie les processus administratifs, "
+                "tout en renforçant la précision et l'efficacité des démarches.\n"
+                "L'automatisation permet de vérifier des critères réglementaires à grande échelle, assurant ainsi "
+                "rapidité, fiabilité et traçabilité dans l'analyse des dossiers."
+            ),
+            "competences": "Power BI · SeveUp · Python · Automatisation . IFC",
+            "medias": [
+                {"type": "image", "src": "img/Projets/verif_permis1.png"},
+                {"type": "image", "src": "img/Projets/verif_permis2.png"}
+            ],
+            "lien": "https://app.powerbi.com/view?r=eyJrIjoiNTU0NThkMWItNTRhMS00YzM0LTgzNmUtYmRmZmRhYTNkNTlmIiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"
+        },
+
+        {
             "id": "bigdata_hadoop",
             "titre": "Experience avec Spark et Power BI",
             "associe": "Université de Lorraine",

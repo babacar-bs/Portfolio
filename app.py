@@ -146,6 +146,7 @@ def projet():
             ],
             "lien": "https://app.powerbi.com/view?r=eyJrIjoiNTU0NThkMWItNTRhMS00YzM0LTgzNmUtYmRmZmRhYTNkNTlmIiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"
         },
+        
 
         {
             "id": "bigdata_hadoop",
@@ -165,6 +166,38 @@ def projet():
             ],
             "lien": "https://app.powerbi.com/view?r=eyJrIjoiM2Q0ZWQ1NTQtZTRlNi00ZDZkLWFhYjMtZTczZGQ0NzZhZTJhIiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"  # Remplace par l’URL réelle si tu l’as
         },
+
+
+
+        {
+            "id": "optimisation_tournee_vehicules",
+            "titre": "Optimisation des tournées logistiques multi-compartiments",
+            "associe": "Université de Lorraine",
+            "description": (
+                 "Dans ce projet, j’ai travaillé en équipe sur l’optimisation des tournées de véhicules multi-compartiments pour un prestataire logistique (3PL),"
+                 "afin d’acheminer différents types de produits (surgelés, frais, ambiants) vers les clients d’un magasin sur une journée."
+                 "Le problème a été modélisé en PLNE sous IBM CPLEX, puis complété par une heuristique ALNS pour "
+                 "traiter les instances trop volumineuses. Les solutions obtenues sont proches de l’optimum, "
+                 "respectent les contraintes opérationnelles et permettent une réduction significative des coûts, "
+                 "y compris lorsque la méthode exacte atteint ses limites."
+            ),
+            "competences": "Logistique · Optimisation · Python · ALNS · IBM CPLEX",
+            "medias": [
+                {"type": "image", "src": "img/Projets/alns1.png"},
+                {"type": "image", "src": "img/Projets/alns2.png"},
+                {"type": "image", "src": "img/Projets/alns3.png"},
+                {"type": "image", "src": "img/Projets/alns4.png"},
+                {"type": "image", "src": "img/Projets/alns5.png"},
+                {"type": "image", "src": "img/Projets/alns6.png"},
+                {"type": "image", "src": "img/Projets/alns7.png"},
+                {"type": "image", "src": "img/Projets/alns8.png"},
+                
+            ],
+        },
+
+
+
+        
         {
     "id": "accent-audio-classification",
     "titre": "Classification d’accents anglais (Indien, Britannique, Américain)",

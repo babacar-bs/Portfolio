@@ -68,9 +68,9 @@ def resume():
     ]
 
     certifications = [
-        {"name": "Derive Insights from BigQuery Data \n Google", "logo": "img/google_logo.jpg"},
-        {"name": "dbt Fundamentals \n dbt Labs", "logo": "img/dbtlabs_logo.jpg"},
-        {"name": "Hands-On Essentials \n Snowflake", "logo": "img/snowflake_computing_logo.jpg"},
+        {"name": "Derive Insights from BigQuery Data \n Google", "logo": "img/google_logo.jpeg"},
+        {"name": "dbt Fundamentals \n dbt Labs", "logo": "img/dbtlabs_logo.jpeg"},
+        {"name": "Hands-On Essentials \n Snowflake", "logo": "img/snowflake_computing_logo.jpeg"},
         {"name": "Cloud Computing Fundamentals \n IBM", "logo": "img/ibm_logo.jpg"},
         {"name": "INSIDE LVMH CERTIFICATE \n LVMH", "logo": "img/lvmh_logo.jpg"},
         {"name": "SeveUp App / BIM data visualisation \n SeveUp", "logo": "img/seveup_logo.jpg"}

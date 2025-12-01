@@ -151,8 +151,8 @@ def projet():
             "id": "logistics-data-pipeline-bigquery-looker",
             "titre": "Pipeline Data Logistique sur GCP",
             "description": (
-                  "Conception et déploiement d’un pipeline complet de traitement des données logistiques selon l'architecture en medaillon "
-                    "les fichiers CSV bruts sont stockés dans Google Cloud Storage transformés, "
+                  "Conception et déploiement d’un pipeline complet de traitement des données logistiques selon l'architecture en medaillon\n"
+                    "Les fichiers CSV bruts sont stockés dans Google Cloud Storage transformés, "
                     "chargés dans BigQuery, puis raffinés et normalisés, "
                     "avant d’être modélisés en tables dimensionnelles et faits.\n"
                     "Les données sont exposées via une vue sécurisée dédiée, permettant une visualisation performante dans Looker. "
@@ -194,9 +194,9 @@ def projet():
             "associe": "Université de Lorraine",
             "description": (
                  "Dans ce projet, j’ai travaillé en équipe sur l’optimisation des tournées de véhicules multi-compartiments pour un prestataire logistique (3PL),"
-                 "afin d’acheminer différents types de produits (surgelés, frais, ambiants) vers les clients d’un magasin sur une journée."
+                 "afin d’acheminer différents types de produits (surgelés, frais, ambiants) vers les clients d’un magasin sur une journée.\n"
                  "Le problème a été modélisé en PLNE sous IBM CPLEX, puis complété par une heuristique ALNS pour "
-                 "traiter les instances trop volumineuses. Les solutions obtenues sont proches de l’optimum, "
+                 "traiter les instances trop volumineuses.\nLes solutions obtenues sont proches de l’optimum, "
                  "respectent les contraintes opérationnelles et permettent une réduction significative des coûts, "
                  "y compris lorsque la méthode exacte atteint ses limites."
             ),

@@ -146,7 +146,26 @@ def projet():
             ],
             "lien": "https://app.powerbi.com/view?r=eyJrIjoiNTU0NThkMWItNTRhMS00YzM0LTgzNmUtYmRmZmRhYTNkNTlmIiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"
         },
-        
+
+        {
+            "id": "logistics-data-pipeline-bigquery-looker",
+            "titre": "Pipeline Data Logistique sur GCP",
+            "description": (
+                  "Conception et déploiement d’un pipeline complet de traitement des données logistiques selon l'architecture en medaillon "
+                    "les fichiers CSV bruts sont stockés dans Google Cloud Storage transformés, "
+                    "chargés dans BigQuery, puis raffinés et normalisés, "
+                    "avant d’être modélisés en tables dimensionnelles et faits.\n"
+                    "Les données sont exposées via une vue sécurisée dédiée, permettant une visualisation performante dans Looker. "
+                    "Les KPI clés suivent les volumes de commandes, les ventes, les délais de livraison, ainsi que l’analyse des meilleurs clients.\n "
+                    "L’architecture intègre les bonnes pratiques de sécurité et de gestion des accès IAM, garantissant un contrôle strict sur les dashboards."
+            ),
+            "competences": "Python · GCP · Cloud Storage · BigQuery · SQL · Data Modeling · Looker · IAM · Logistique",
+            "medias": [
+                {"type": "image", "src": "img/Projets/logi2.png"},
+                {"type": "image", "src": "img/Projets/logi1.png"}
+                
+            ],
+        },
 
         {
             "id": "bigdata_hadoop",

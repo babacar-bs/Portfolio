@@ -161,8 +161,8 @@ def projet():
             ),
             "competences": "Python · GCP · Cloud Storage · BigQuery · SQL · Data Modeling · Looker · IAM · Logistique",
             "medias": [
-                {"type": "image", "src": "img/Projets/logi2.png"},
-                {"type": "image", "src": "img/Projets/logi1.png"}
+                {"type": "image", "src": "img/Projets/logi1.png"},
+                {"type": "image", "src": "img/Projets/logi2.png"}
                 
             ],
         },

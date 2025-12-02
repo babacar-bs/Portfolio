@@ -42,12 +42,15 @@ def resume():
         {"name": "Python", "logo": "python.png"},
         {"name": "SQL", "logo": "sql.png"},
         {"name": "Power BI", "logo": "powerbi.png"},
-        {"name": "Excel", "logo": "excel.png"},
+       # {"name": "Excel", "logo": "excel.png"},
+        {"name": "Looker", "logo": "looker.png"},
         {"name": "Flask", "logo": "flask.png"},
         {"name": "Postgres", "logo": "postgres.png"},
-        {"name": "Sqlite", "logo": "sqlite.png"},
+        {"name": "Snowflake", "logo": "snowflake.png"}
+        #{"name": "Sqlite", "logo": "sqlite.png"},
+        {"name": "GCP", "logo": "gcp.png"},
         {"name": "Git", "logo": "git.png"},
-        {"name": "Github", "logo": "github.png"},
+        #{"name": "Github", "logo": "github.png"},
         
     ]
 

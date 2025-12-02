@@ -46,7 +46,7 @@ def resume():
         {"name": "Looker", "logo": "looker.png"},
         {"name": "Flask", "logo": "flask.png"},
         {"name": "Postgres", "logo": "postgres.png"},
-        {"name": "Snowflake", "logo": "snowflake.png"}
+        {"name": "Snowflake", "logo": "snowflake.png"},
         #{"name": "Sqlite", "logo": "sqlite.png"},
         {"name": "GCP", "logo": "gcp.png"},
         {"name": "Git", "logo": "git.png"},

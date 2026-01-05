@@ -169,6 +169,28 @@ def projet():
                 
             ],
         },
+        {
+              "id": "agridata-faostat",
+              "titre": "AgriData Explorer",
+              "associe": "Projet personnel (Données FAO)",
+              "description": "AgriData Explorer est une application web interactive permettant d’explorer les données agricoles FAOSTAT par pays, culture et période, avec des graphiques dynamiques pour la production et le rendement. Cette version MVP offre une exploration simple et visuelle, avec des améliorations futures prévues : multi-pays, analyses par zone, visualisations avancées et intégration de données météo.",
+              "competences": "Data Modeling · Python · SQLite · FAOSTAT · Data Visualisation · API · AJAX · Chart.js",
+              "medias": [
+                {
+                  "type": "image",
+                  "src": "img/Projets/agri1.png"
+                },
+                {
+                  "type": "image",
+                  "src": "img/Projets/agri2.png"
+                },
+                  {
+                  "type": "image",
+                  "src": "img/Projets/agri3.png"
+                }
+              ],
+              "lien": "/projets/agridataexplorer"
+            },
 
         {
             "id": "bigdata_hadoop",
@@ -315,6 +337,99 @@ def projet():
         # Tu peux ajouter d'autres projets ici...
     ]
     return render_template("projet.html", projets=projets_data)
+
+
+
+
+
+#Agridata explorer projet 
+DB_PATH = "data/faostat.db"
+
+# -------------------------------
+# Page principale
+# -------------------------------
+@app.route('/projets/agridataexplorer')
+def agridataexplorer():
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+
+    # Récupération des filtres
+    cur.execute("SELECT DISTINCT Country FROM observations ORDER BY Country")
+    countries = [r["Country"] for r in cur.fetchall()]
+
+    cur.execute("SELECT DISTINCT Item FROM observations ORDER BY Item")
+    items = [r["Item"] for r in cur.fetchall()]
+
+    cur.execute("SELECT MIN(Year) as min_year, MAX(Year) as max_year FROM observations")
+    years_row = cur.fetchone()
+    min_year, max_year = years_row["min_year"], years_row["max_year"]
+
+    conn.close()
+
+    # Affichage initial avec valeurs par défaut
+    return render_template(
+        "agri_data.html",
+        countries=countries,
+        items=items,
+        min_year=min_year,
+        max_year=max_year,
+        selected_country=countries[0],
+        selected_item=items[0],
+        start_year=min_year,
+        end_year=max_year
+    )
+
+# -------------------------------
+# Route AJAX pour récupérer les données
+# -------------------------------
+@app.route('/get_data', methods=['POST'])
+def get_data():
+    req = request.get_json()
+    country = req.get("country")
+    item = req.get("item")
+    start_year = req.get("start_year")
+    end_year = req.get("end_year")
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    cur = conn.cursor()
+
+    # Production
+    cur.execute("""
+        SELECT Year, SUM(Value) AS production
+        FROM observations
+        WHERE Country=? AND Item=? AND Element='Production' AND Value IS NOT NULL
+          AND Year BETWEEN ? AND ?
+        GROUP BY Year
+        ORDER BY Year
+    """, (country, item, start_year, end_year))
+    prod_rows = cur.fetchall()
+
+    # Rendement (t/ha)
+    cur.execute("""
+        SELECT Year, SUM(Value)/COUNT(Value) AS yield
+        FROM observations
+        WHERE Country=? AND Item=? AND Element='Yield' AND Value IS NOT NULL
+          AND Year BETWEEN ? AND ?
+        GROUP BY Year
+        ORDER BY Year
+    """, (country, item, start_year, end_year))
+    yield_rows = cur.fetchall()
+
+    conn.close()
+
+    # Transformation en JSON
+    prod_data = [{"Year": r["Year"], "value": r["production"]} for r in prod_rows]
+    yield_data = [{"Year": r["Year"], "value": r["yield"]} for r in yield_rows]
+
+    # Message si pas de données
+    if not prod_data and not yield_data:
+        message = f"Aucune donnée disponible pour {item} au {country} entre {start_year} et {end_year}."
+    else:
+        message = ""
+
+    return jsonify({"production": prod_data, "yield": yield_data, "message": message})
 
 #MAIN
 if __name__ == "__main__":

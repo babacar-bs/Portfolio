@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>AgriData Explorer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Styles simples -->
+<style>
+body { font-family: Arial; margin: 30px; background: #fafafa; }
+h1 { color: #2E7D32; }
+form { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom:20px; background:#fff; padding:20px; border-radius:8px; }
+label { font-weight:bold; font-size:0.9em; }
+select, button { padding:6px; width:100%; }
+button { background:#2E7D32;color:white;border:none;cursor:pointer;font-weight:bold; }
+button:hover { background:#256428; }
+.chart-container { margin-top:20px; background:white; padding:20px; border-radius:8px; height:400px; }
+#yearSlider { margin-top:10px; }
+#message { color:red; font-weight:bold; margin-top:10px; }
+footer { margin-top:30px; font-size:0.85em; color:#555; }
+</style>
+
+<!-- Chart.js et noUiSlider -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+</head>
+
+<body>
+<h1>🌾 AgriData Explorer</h1>
+<p id="chartTitle">Production de {{ selected_item }} au {{ selected_country }}</p>
+
+<form id="filterForm">
+  <div>
+    <label>Pays</label>
+    <select id="country" name="country">
+      {% for c in countries %}
+        <option value="{{ c }}" {% if c==selected_country %}selected{% endif %}>{{ c }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div>
+    <label>Culture</label>
+    <select id="item" name="item">
+      {% for i in items %}
+        <option value="{{ i }}" {% if i==selected_item %}selected{% endif %}>{{ i }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div>
+    <label>Période (Années)</label>
+    <div id="yearSlider"></div>
+    <div><span id="sliderStart">{{ min_year }}</span> - <span id="sliderEnd">{{ max_year }}</span></div>
+  </div>
+
+  <div style="align-self:end;">
+    <button type="submit">Mettre à jour</button>
+  </div>
+</form>
+
+<!-- Message si pas de données -->
+<div id="message"></div>
+
+<!-- Graphiques -->
+<div class="chart-container">
+  <canvas id="prodChart"></canvas>
+</div>
+
+<div class="chart-container">
+  <canvas id="yieldChart"></canvas>
+</div>
+
+<footer>Données issues de la FAOSTAT (FAO).</footer>
+
+<script>
+const minYear = {{ min_year }}, maxYear = {{ max_year }};
+const chartTitle = document.getElementById("chartTitle");
+const messageDiv = document.getElementById("message");
+
+// ---------------- Slider ----------------
+const yearSlider = document.getElementById('yearSlider');
+noUiSlider.create(yearSlider, {
+    start: [{{ start_year }}, {{ end_year }}],
+    connect: true,
+    step: 1,
+    tooltips: true,
+    range: { 'min': minYear, 'max': maxYear },
+    format: { to: v=>parseInt(v), from: v=>parseInt(v) }
+});
+const sliderStart = document.getElementById('sliderStart');
+const sliderEnd = document.getElementById('sliderEnd');
+yearSlider.noUiSlider.on('update', values => {
+    sliderStart.innerText = values[0];
+    sliderEnd.innerText = values[1];
+});
+
+// ---------------- Charts init ----------------
+const prodCtx = document.getElementById("prodChart").getContext("2d");
+const yieldCtx = document.getElementById("yieldChart").getContext("2d");
+
+let prodChart = new Chart(prodCtx, {
+  type: "line",
+  data: { labels: [], datasets:[{label:"Production (tonnes)", data:[], borderColor:"#2E7D32", backgroundColor:"rgba(46,125,50,0.25)", fill:true, tension:0.3}]},
+  options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"top"}, tooltip:{mode:"index", intersect:false}}, scales:{x:{title:{display:true,text:"Année"}}, y:{title:{display:true,text:"Production"}}} }
+});
+
+let yieldChart = new Chart(yieldCtx, {
+  type: "line",
+  data: { labels: [], datasets:[{label:"Rendement (t/ha)", data:[], borderColor:"#FFA000", backgroundColor:"rgba(255,160,0,0.25)", fill:true, tension:0.3}]},
+  options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"top"}, tooltip:{mode:"index", intersect:false}}, scales:{x:{title:{display:true,text:"Année"}}, y:{title:{display:true,text:"Rendement"}}} }
+});
+
+// ---------------- AJAX update ----------------
+document.getElementById("filterForm").addEventListener("submit", e=>{
+    e.preventDefault();
+    const [start_year, end_year] = yearSlider.noUiSlider.get().map(Number);
+    const country = document.getElementById("country").value;
+    const item = document.getElementById("item").value;
+
+    fetch("/get_data", {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({country,item,start_year,end_year})
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        chartTitle.innerText = `Production et rendement de ${item} au ${country}`;
+
+        if(data.message){
+            messageDiv.innerText = data.message;
+            updateChart(prodChart, []);
+            updateChart(yieldChart, []);
+        } else {
+            messageDiv.innerText = "";
+            updateChart(prodChart, data.production);
+            updateChart(yieldChart, data.yield);
+        }
+    })
+    .catch(err=>console.error(err));
+});
+
+// ---------------- Update function ----------------
+function updateChart(chart, data){
+    chart.data.labels = data.map(d=>d.Year);
+    chart.data.datasets[0].data = data.map(d=>d.value);
+    chart.update();
+}
+
+// Initial load
+document.getElementById("filterForm").dispatchEvent(new Event("submit"));
+</script>
+</body>
+</html>

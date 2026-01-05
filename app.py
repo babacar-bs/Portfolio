@@ -343,7 +343,9 @@ def projet():
 
 
 #Agridata explorer projet 
-DB_PATH = "static/faostat.db"
+# DB_PATH = "static/faostat.db"
+DB_PATH = os.path.join(os.path.dirname(__file__), "static", "faostat.db")
+
 
 # -------------------------------
 # Page principale

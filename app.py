@@ -186,7 +186,7 @@ def projet():
                 },
                   {
                   "type": "image",
-                  "src": "img/Projets/agri3.png"
+                  "src": "img/Projets/agri3.jpg"
                 }
               ],
               "lien": "/projets/agridataexplorer"

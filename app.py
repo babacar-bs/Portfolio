@@ -343,7 +343,7 @@ def projet():
 
 
 #Agridata explorer projet 
-DB_PATH = "data/faostat.db"
+DB_PATH = "static/faostat.db"
 
 # -------------------------------
 # Page principale

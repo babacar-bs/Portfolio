@@ -198,7 +198,7 @@ def projet():
 
          {
     "id": "data-platform-perception-client",
-    "titre": "Plateforme Data de pilotage de la perception client",
+    "titre": "Plateforme Data d’analyse de la réputation en ligne",
     "description": (
         "Conception et développement d’une plateforme data complète permettant de collecter, structurer, analyser et visualiser "
         "des données textuelles issues de sources hétérogènes (Trustpilot, ConsumerAffairs) afin d’analyser la perception "

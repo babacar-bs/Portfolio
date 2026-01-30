@@ -199,6 +199,7 @@ def projet():
          {
     "id": "data-platform-perception-client",
     "titre": "Plateforme Data d’analyse de la réputation en ligne",
+    "associe": "Université de Lorraine - Projet de synthése",
     "description": (
         "Conception et développement d’une plateforme data complète permettant de collecter, structurer, analyser et visualiser "
         "des données textuelles issues de sources hétérogènes (Trustpilot, ConsumerAffairs) afin d’analyser la perception "
@@ -297,7 +298,7 @@ def projet():
 {
     "id": "sentiment-analysis-incremental",
     "titre": "Analyse de sentiments avec apprentissage incrémental",
-    "associe": "Université de Lorraine – Projet de recherche",
+    "associe": "Université de Lorraine – LCOMS",
     "description": (
         "Dans un contexte de croissance exponentielle des contenus en ligne, ce projet vise à proposer "
         "une approche d’analyse des sentiments évolutive, capable de s’adapter à un flux continu de données. "

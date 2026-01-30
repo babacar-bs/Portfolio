@@ -192,6 +192,37 @@ def projet():
             ],
         },
 
+
+
+
+
+         {
+    "id": "data-platform-perception-client",
+    "titre": "Plateforme Data de pilotage de la perception client",
+    "description": (
+        "Conception et développement d’une plateforme data complète permettant de collecter, structurer, analyser et visualiser "
+        "des données textuelles issues de sources hétérogènes (Trustpilot, ConsumerAffairs) afin d’analyser la perception "
+        "d’une entreprise ou d’une personnalité.\n"
+        "Ma contribution sur le projet repose sur la conception de pipelines ETL en Python automatisant l’extraction, la transformation, "
+        "les contrôles qualité et l’enrichissement des données, avant leur structuration dans des modèles analytiques exploitables.\n"
+        "Les données sont exposées via des tableaux de bord interactifs et sécurisés, facilitant la restitution claire "
+        "d’informations complexes et la prise de décision par des utilisateurs non techniques.\n"
+        "L’architecture a été conçue pour être exploitable, supervisable et évolutive, avec une gestion fine des accès."
+    ),
+    "competences": "Python · PostgreSQL · ETL · Data Modeling · LLM · Dashboard · Git · Jira",
+    "medias": [
+        {"type": "image", "src": "img/Projets/erep1.png"},
+        {"type": "image", "src": "img/Projets/erep2.png"},
+        {"type": "image", "src": "img/Projets/erep3.png"},
+         {"type": "image", "src": "img/Projets/erep4.png"},
+         {"type": "image", "src": "img/Projets/erep5.png"}
+    ]
+}
+
+        
+        
+        ,
+
         {
             "id": "bigdata_hadoop",
             "titre": "Experience avec Spark et Power BI",

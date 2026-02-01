@@ -142,7 +142,7 @@ def projet():
                 "L'automatisation permet de vérifier des critères réglementaires à grande échelle, assurant ainsi "
                 "rapidité, fiabilité et traçabilité dans l'analyse des dossiers."
             ),
-            "competences": "Power BI · SeveUp · Python · Automatisation . IFC",
+            "competences": "Power BI · SeveUp · Python · Automatisation · Données SIG · IFC",
             "medias": [
                 {"type": "image", "src": "img/Projets/verif_permis1.png"},
                 {"type": "image", "src": "img/Projets/verif_permis2.png"}

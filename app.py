@@ -149,29 +149,7 @@ def projet():
             ],
             "lien": "https://app.powerbi.com/view?r=eyJrIjoiNTU0NThkMWItNTRhMS00YzM0LTgzNmUtYmRmZmRhYTNkNTlmIiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"
         },
-        {
-              "id": "agridata-faostat",
-              "titre": "AgriData Explorer",
-              "associe": "Projet personnel (Données FAO)",
-              "description": "AgriData Explorer est une application web interactive permettant d’explorer les données agricoles FAOSTAT par pays, culture et période, avec des graphiques dynamiques pour la production et le rendement. Cette version MVP offre une exploration simple et visuelle, avec des améliorations futures prévues : multi-pays, analyses par zone, visualisations avancées et intégration de données météo.",
-              "competences": "Data Modeling · Python · SQLite · FAOSTAT · Data Visualisation · API · AJAX · Chart.js",
-              "medias": [
-                {
-                  "type": "image",
-                  "src": "img/Projets/agri1.png"
-                },
-                {
-                  "type": "image",
-                  "src": "img/Projets/agri2.png"
-                },
-                  {
-                  "type": "image",
-                  "src": "img/Projets/agri3.jpg"
-                }
-              ],
-              "lien": "/projets/agridataexplorer"
-            },
-
+    
         {
             "id": "logistics-data-pipeline-bigquery-looker",
             "titre": "Pipeline Data Logistique sur GCP",
@@ -236,9 +214,12 @@ def projet():
             ),
             "competences": "Big Data · Spark · Power BI",
             "medias": [
+                 {"type": "image", "src": "img/Projets/p1-4.png"},
+                {"type": "image", "src": "img/Projets/p1-5.png"},
                 {"type": "image", "src": "img/Projets/p1-1.png"},
                 {"type": "image", "src": "img/Projets/p1-2.png"},
                 {"type": "image", "src": "img/Projets/p1-3.png"}
+               
             ],
             "lien": "https://app.powerbi.com/view?r=eyJrIjoiM2Q0ZWQ1NTQtZTRlNi00ZDZkLWFhYjMtZTczZGQ0NzZhZTJhIiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"  # Remplace par l’URL réelle si tu l’as
         },
@@ -271,7 +252,28 @@ def projet():
             ],
         },
 
-
+{
+              "id": "agridata-faostat",
+              "titre": "AgriData Explorer",
+              "associe": "Projet personnel (Données FAO)",
+              "description": "AgriData Explorer est une application web interactive permettant d’explorer les données agricoles FAOSTAT par pays, culture et période, avec des graphiques dynamiques pour la production et le rendement. Cette version MVP offre une exploration simple et visuelle, avec des améliorations futures prévues : multi-pays, analyses par zone, visualisations avancées et intégration de données météo.",
+              "competences": "Data Modeling · Python · SQLite · FAOSTAT · Data Visualisation · API · AJAX · Chart.js",
+              "medias": [
+                {
+                  "type": "image",
+                  "src": "img/Projets/agri1.png"
+                },
+                {
+                  "type": "image",
+                  "src": "img/Projets/agri2.png"
+                },
+                  {
+                  "type": "image",
+                  "src": "img/Projets/agri3.jpg"
+                }
+              ],
+              "lien": "/projets/agridataexplorer"
+            },
 
         
         {

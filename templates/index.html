@@ -1,133 +1,263 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="fr" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="shortcut icon" href="img/log.ico" type="image/x-icon"> -->
-    <link rel="shortcut icon" href="{{ url_for('static', filename='img/log.ico')}}" type="image/x-icon">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/index.css"> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/indexx.css')}}">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Babacar SARR – Data Engineer & BI Developer." />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/log.ico') }}" type="image/x-icon" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/indexx.css') }}" />
+  <title>Babacar SARR</title>
 </head>
-
 <body>
 
-<header>
-  <!-- Hamburger (mobile uniquement) -->
-  <div class="hamburger" id="hamburger">&#9776;</div>
-
-  <!-- Menu desktop (visible sur écran large, à gauche) -->
-  <nav class="nav-desktop">
+<header id="header">
+  <nav class="nav-inner">
+    <a href="/" class="nav-logo">BS</a>
     <ul class="nav-links">
-      <li><a href="/"  class="{{ 'active-link' if request.path == '/' else '' }}">Accueil</a></li>
-      <li><a href="/cv"  class="{{ 'active-link' if request.path == '/cv' else '' }}">CV</a></li>
-      <li><a href="/projets"  class="{{ 'active-link' if request.path == '/projets' else '' }}">Projets</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="/cv">CV</a></li>
     </ul>
-    <ul class="iconslist4">
-      <li class="icons">
-        <a href="http://www.linkedin.com/in/babacar-s" target="_blank"><img src="{{ url_for('static', filename='img/linkedin_icon.png')}}" alt="LinkedIn"></a>
-        <!-- <a href="#" target="b2b_2b2"><img src="{{ url_for('static', filename='img/discord_icon.png')}}" alt="Discord"></a> -->
-      </li>
-      <li class="email">
-        <a href="mailto:b26.sarr@gmail.com">b26.sarr@gmail.com</a>
-      </li>
-    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Thème">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
   </nav>
-
-  <!-- Menu mobile (glissant depuis la gauche) -->
-  <nav class="nav-menu" id="navMenu">
-    <ul class="nav-links">
-      <li><a href="/"  class="{{ 'active-link' if request.path == '/' else '' }}">Accueil</a></li>
-      <li><a href="/cv"  class="{{ 'active-link' if request.path == '/cv' else '' }}">CV</a></li>
-      <li><a href="/projets"  class="{{ 'active-link' if request.path == '/projets' else '' }}">Projets</a></li>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">À propos</a></li>
+      <li><a href="#stack" class="mobile-link">Stack</a></li>
+      <li><a href="#projects" class="mobile-link">Projets</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="/cv" class="mobile-link">CV</a></li>
     </ul>
-    <ul class="iconslist3">
-      <li>
-        <a href="http://www.linkedin.com/in/babacar-s" target="_blank"><img src="{{ url_for('static', filename='img/linkedin_icon.png')}}" alt="LinkedIn"></a>
-        #<a href="#"><img src="{{ url_for('static', filename='img/github_icon.png')}}" alt="GitHub"></a>
-        #<a href="#"><img src="{{ url_for('static', filename='img/discord_icon.png')}}" alt="Discord"></a>
-      </li>
-      <li class="email">
-        <a href="mailto:b26.sarr@gmail.com">b26.sarr@gmail.com</a>
-      </li>
-    </ul>
-  </nav>
+  </div>
 </header>
 
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-content">
+    <p class="hero-tag" data-aos="fade-up" data-aos-duration="500">Data Engineer & BI Developer</p>
+    <h1 class="hero-name" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+      Babacar<br><span class="accent">SARR</span>
+    </h1>
+    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+      Je conçois des pipelines de données fiables et des dashboards<br>
+      qui transforment l'information en décision.
+    </p>
+    <div class="hero-cta" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
+      <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+      <!-- <a href="{{ url_for('static', filename='cv_babacar_sarr.pdf') }}" class="btn btn-secondary" download>Télécharger le CV</a> -->
+    </div>
+  </div>
+  <a href="#about" class="hero-scroll-hint">↓</a>
+</section>
 
+<!-- À PROPOS -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text" data-aos="fade-right" data-aos-duration="600">
+        <p class="section-label">À propos</p>
+        <h2>Construire des données<br>qui ont du sens</h2>
+        <p>Diplômé d'un Master en Systèmes d'Information Décisionnelle à l'Université de Lorraine, je conçois des architectures de données de la collecte jusqu'à la visualisation.</p>
+        <p>Mon profil combine l'ingénierie des données (pipelines, modélisation, cloud) et la restitution métier, ce qui me permet de travailler aussi bien avec des équipes techniques que non techniques.</p>
+        <p class="available-badge"><span class="dot"></span> Disponible pour de nouvelles opportunités</p>
+      </div>
+      <div class="about-stats" data-aos="fade-left" data-aos-duration="600" data-aos-delay="100">
+        <div class="stat-card"><span class="stat-number">10+</span><span class="stat-label">Projets data</span></div>
+        <!-- <div class="stat-card"><span class="stat-number">3</span><span class="stat-label">Expériences pro</span></div> -->
+        <div class="stat-card"><span class="stat-number">6+</span><span class="stat-label">Certifications</span></div>
+        <div class="stat-card"><span class="stat-number">5+</span><span class="stat-label">Ans de formation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-    <main>
-        <section class="prenom" data-aos="fade-up" data-aos-delay= "150" data-aos-duration = "600">
-            <h1>BABACAR</h1>
-        </section>
-        <section class="nom" data-aos="fade-up" data-aos-delay= "350" data-aos-duration = "600">
-            <h1>SARR</h1>
-        </section>
-    </main>
-    <br><br><br><br><br>
-    <!-- <p class="presentation">👋 Je suis Babacar SARR, étudiant en dernière année de Master Informatique Décisionnelle à l'Université de Lorraine. Passionné par la data, l'IA et la valorisation des données, je conçois des solutions innovantes pour transformer l'information en décision. <br> Ce portfolio présente mes projets, mes compétences et mon parcours.</p> -->
-    <p class="presentation">
-  👋<br>
-  Je suis <strong>Babacar SARR</strong>.
-  <br><br>
-  🎓 Je cherche à appliquer mes compétences en <strong>analyse de données</strong>, <strong>business intelligence</strong>, <strong>optimisation</strong> et <strong>développement</strong> à des problématiques concrètes.
-  <br><br>
-  🚀 Mon objectif : créer de la valeur à partir des données et aider les organisations à prendre des décisions plus intelligentes et efficaces.
-  <br><br>
-  📅 Je suis disponible pour de nouvelles opportunités professionnelles.
-  <br><br>
-  💡 Ce portfolio présente quelques uns de mes projets, ainsi que mes compétences et mon parcours. Il me sert également de terrain d’expérimentation pour tester de nouvelles technologies <span style="white-space: nowrap;"> (il est donc en constante évolution).</span>
-  <br><br>
-  Bonne visite ! <em>(N’hésitez pas à me contacter.)</em>
-</p>
-
-
-
-    <section class="preview-projets" data-aos="fade-up" data-aos-delay="500">
-    <h2>Projets récents</h2>
-        <div class="projets-grid">
-            <div class="projet">
-            <h3>Outil d’évaluation de l’e-réputation</h3>
-            <p>Développement d'un outil d'analyse de l’e-réputation pour évaluer la perception d’une entreprise ou d'une personnalité (projet de synthése).</p>
-            </div>
-            <div class="projet">
-            <h3>Transport et Logistique</h3>
-            <p>Développement d’heuristiques pour optimiser les tournées de véhicules lors des livraisons, dans le but d’améliorer l’efficacité et réduire les coûts opérationnels.</p>
-            </div>
+<!-- STACK -->
+<section class="section section-alt" id="stack">
+  <div class="container">
+    <p class="section-label" data-aos="fade-up">Stack technique</p>
+    <h2 data-aos="fade-up" data-aos-delay="50">Les outils que j'utilise</h2>
+    <div class="stack-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="stack-category">
+        <h3>Langages de programmation</h3>
+        <div class="stack-tags">
+          <span class="tag">Python</span><span class="tag">SQL</span>
+          <span class="tag">R</span><span class="tag">Java</span><span class="tag">Javascript</span>
         </div>
-        <a href="/projets" class="btn-cv">Voir tous les projets</a>
-    </section>
-    <footer>
-    &copy; Babacar SARR
-    </footer>
+      </div>
+      <div class="stack-category">
+        <h3>BI & Reporting</h3>
+        <div class="stack-tags">
+          <span class="tag">Power BI</span><span class="tag">Looker</span>
+          <span class="tag">Excel</span><span class="tag">Chart.js</span><span class="tag">google analytics</span>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h3>Data Engineering</h3>
+        <div class="stack-tags">
+          <span class="tag">Talend</span><span class="tag">BigQuery</span><span class="tag">dbt</span>
+          <span class="tag">Airflow</span>
+          <span class="tag">Modélisation multidimensionnelle</span>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h3>BD & Cloud</h3>
+        <div class="stack-tags">
+          <span class="tag">Postgresql</span><span class="tag">MySQL</span>
+          <span class="tag">SqlServer</span><span class="tag">Oracle</span>
+          <span class="tag">GCP</span><span class="tag">AZURE</span>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h3>IA & Analyse</h3>
+        <div class="stack-tags">
+          <span class="tag">Scikit-learn</span><span class="tag">ML et DL</span>
+          <span class="tag">NLP</span><span class="tag">LLM</span>
+        </div>
+      </div>
+      <div class="stack-category">
+        <h3>Outils et Méthodologies pour les projets</h3>
+        <div class="stack-tags">
+          <span class="tag">Git</span><span class="tag">CI/CD</span><span class="tag">Jira</span>
+          <span class="tag">Approche Agile</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!--canva1--> 
-    <canvas></canvas>
-    <!--FIN--> 
+<!-- PROJETS -->
+<section class="section" id="projects">
+  <div class="container">
+    <p class="section-label" data-aos="fade-up">Projets</p>
+    <h2 data-aos="fade-up" data-aos-delay="50">Quelques réalisations</h2>
+    <div class="projects-grid">
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    AOS.init({
-        once: true // ✅ Les animations ne se jouent qu'une seule fois
-    });
-    </script>
-    <script  src="{{ url_for('static', filename='js/index.js')}}"></script>
-    <script  src="{{ url_for('static', filename='js/background.js')}}"></script>
+      <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-img">
+          <img src="{{ url_for('static', filename='img/Projets/logi1.png') }}" alt="Pipeline GCP" loading="lazy" />
+          <div class="project-img-overlay">
+            <a href="/projets" class="btn btn-primary btn-sm">Voir le projet →</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag tag-accent">Python</span>
+            <span class="tag">GCP</span><span class="tag">BigQuery</span><span class="tag">Looker</span><span class="tag">IAM</span>
+          </div>
+          <h3>Pipeline Data Logistique sur GCP</h3>
+          <p>Architecture médaillon complète: de l'ingestion CSV jusqu'au dashboard Looker avec KPIs logistiques.</p>
+        </div>
+      </article>
 
+      <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-img">
+          <img src="{{ url_for('static', filename='img/Projets/erep1.png') }}" alt="E-réputation" loading="lazy" />
+          <div class="project-img-overlay">
+            <a href="/projets" class="btn btn-primary btn-sm">Voir le projet →</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag tag-accent">ETL</span>
+            <span class="tag">Python</span><span class="tag">Talend</span><span class="tag">Airflow</span><span class="tag">NLP</span>
+          </div>
+          <h3>Plateforme d'analyse de l'e-réputation</h3>
+          <p>Pipelines ETL automatisés pour analyser des avis clients avec dashboards interactifs sécurisés.</p>
+        </div>
+      </article>
 
-    <script>
+      <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-img">
+          <img src="{{ url_for('static', filename='img/Projets/verif_permis1.png') }}" alt="Permis de construire" loading="lazy" />
+          <div class="project-img-overlay">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNTU0NThkMWItNTRhMS00YzM0LTgzNmUtYmRmZmRhYTNkNTlmIiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9" target="_blank" class="btn btn-primary btn-sm">Voir le dashboard →</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag tag-accent">Power BI</span>
+            <span class="tag">Python</span><span class="tag">SIG</span><span class="tag">Automatisation</span>
+          </div>
+          <h3>Automatisation des permis de construire</h3>
+          <p>Réduction du délai de vérification de <strong>10 mois → quelques minutes</strong> via un workflow automatisé.</p>
+        </div>
+      </article>
+
+    </div>
+    <div class="projects-cta" data-aos="fade-up">
+      <a href="/projets" class="btn btn-secondary">Tous les projets →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="contact-wrap" data-aos="fade-up">
+      <p class="section-label">Contact</p>
+      <h2>Travaillons ensemble</h2>
+      <p class="contact-sub">Disponible pour des postes CDI, CDD, missions freelance ou collaborations.</p>
+      <div class="contact-links">
+        <a href="mailto:b26.sarr@gmail.com" class="btn btn-primary">✉️ b26.sarr@gmail.com</a>
+        <a href="https://linkedin.com/in/babacar-s" target="_blank" class="btn btn-secondary">LinkedIn →</a>
+      </div>
+      <p class="github-note">💻 Code disponible sur demande (GitHub privé)</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Babacar SARR</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="{{ url_for('static', filename='js/background.js') }}"></script>
+<script>
+  AOS.init({ once: true, offset: 60 });
+
+  //Dark mode
+  const html = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('theme') || 'light';
+  html.setAttribute('data-theme', saved);
+  toggle.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+
+  //Hamburger
   const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
-
+  const mobileMenu = document.getElementById('mobileMenu');
   hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  });
+  document.querySelectorAll('.mobile-link').forEach(l =>
+    l.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+    })
+  );
+
+  //Header shadow on scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
   });
 </script>
-
 </body>
-
 </html>

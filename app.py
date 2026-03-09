@@ -48,7 +48,7 @@ PAST_SKILLS = [
     {"name": "Docker",      "logo": "docker.png"},
     {"name": "Airflow",     "logo": "airflow.png"},
     {"name": "Oracle",      "logo": "oracle.png"},
-    {"name": "Golang",      "logo": "golang.png"},
+    {"name": "C++",      "logo": "cc.png"},
     {"name": "C",           "logo": "c.png"},
     {"name": "Luigi",       "logo": "luigi.png"},
     {"name": "R",           "logo": "r.png"},

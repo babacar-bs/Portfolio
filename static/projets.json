@@ -1,0 +1,146 @@
+[
+  {
+    "id": "automatisation_permis",
+    "categorie": "pro",
+    "titre": "Automatisation de la vérification des permis de construire",
+    "associe": "SeveUp et A26 Architecture",
+    "description": "Les vérifications réglementaires des permis de construire mobilisaient jusqu'à 10 mois de travail manuel.\nJ'ai conçu un workflow automatisé combinant SeveUp, une plateforme sur mesure et Power BI pour traiter les dossiers.\nRésultat : le délai de vérification est passé de 10 mois à quelques minutes, avec une traçabilité complète des critères analysés.",
+    "competences": "Power BI · SeveUp · Python · Automatisation · Données SIG · IFC · KML",
+    "medias": [
+      { "type": "image", "src": "img/Projets/verif_permis1.png" },
+      { "type": "image", "src": "img/Projets/verif_permis2.png" }
+    ],
+    "lien": "https://app.powerbi.com/view?r=eyJrIjoiNTU0NThkMWItNTRhMS00YzM0LTgzNmUtYmRmZmRhYTNkNTlmIiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"
+  },
+  {
+    "id": "logistics-data-pipeline-bigquery-looker",
+    "categorie": "perso",
+    "titre": "Pipeline Data Logistique sur GCP",
+    "description": "Conception et déploiement d'un pipeline de données logistiques bout en bout sur Google Cloud Platform.\nLes données brutes (CSV) sont ingérées dans Cloud Storage, transformées et chargées dans BigQuery selon une architecture médaillon (bronze → silver → gold), puis modélisées en tables dimensionnelles.\nLes KPIs métier (volumes de commandes, délais de livraison, meilleurs clients) sont restitués dans un dashboard Looker sécurisé avec gestion IAM.",
+    "competences": "Python · GCP · Cloud Storage · BigQuery · SQL · Data Modeling · Looker · IAM · Logistique",
+    "medias": [
+      { "type": "image", "src": "img/Projets/logi1.png" },
+      { "type": "image", "src": "img/Projets/logi2.png" }
+    ]
+  },
+  {
+    "id": "data-platform-perception-client",
+    "categorie": "academique",
+    "titre": "Plateforme Data d'analyse de la réputation en ligne",
+    "associe": "Université de Lorraine – Projet de synthèse",
+    "description": "Conception d'une plateforme data permettant d'analyser la perception en ligne d'une entreprise à partir d'avis clients (Trustpilot, ConsumerAffairs).\nJ'ai développé les pipelines ETL en Python : extraction automatisée, contrôles qualité, enrichissement sémantique via LLM, et chargement dans un modèle analytique PostgreSQL.\nLes résultats sont restitués dans des dashboards interactifs, pensés pour des utilisateurs non techniques.",
+    "competences": "Python · PostgreSQL · ETL · Data Modeling · LLM · Dashboard · Git · Jira",
+    "medias": [
+      { "type": "image", "src": "img/Projets/erep1.png" },
+      { "type": "image", "src": "img/Projets/erep2.png" },
+      { "type": "image", "src": "img/Projets/erep3.png" },
+      { "type": "image", "src": "img/Projets/erep4.png" },
+      { "type": "image", "src": "img/Projets/erep5.png" }
+    ]
+  },
+  {
+    "id": "bigdata_hadoop",
+    "categorie": "academique",
+    "titre": "Analyse Big Data des comportements routiers avec Spark",
+    "associe": "Université de Lorraine",
+    "description": "Reproduction et extension d'une étude académique sur le traitement Big Data en logistique.\nUtilisation de Spark pour traiter le dataset public des vitesses relevées par les voitures-radars en France (2023), en appliquant des transformations distribuées pour identifier des patterns de comportements routiers.\nLes résultats ont été visualisés dans un dashboard Power BI interactif.",
+    "competences": "Big Data · Spark · Power BI",
+    "medias": [
+      { "type": "image", "src": "img/Projets/p1-4.png" },
+      { "type": "image", "src": "img/Projets/p1-5.png" },
+      { "type": "image", "src": "img/Projets/p1-1.png" },
+      { "type": "image", "src": "img/Projets/p1-2.png" },
+      { "type": "image", "src": "img/Projets/p1-3.png" }
+    ],
+    "lien": "https://app.powerbi.com/view?r=eyJrIjoiM2Q0ZWQ1NTQtZTRlNi00ZDZkLWFhYjMtZTczZGQ0NzZhZTJhIiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"
+  },
+  {
+    "id": "optimisation_tournee_vehicules",
+    "categorie": "academique",
+    "titre": "Optimisation des tournées logistiques multi-compartiments",
+    "associe": "Université de Lorraine",
+    "description": "Optimisation des tournées d'un prestataire logistique (3PL) livrant des produits à températures multiples (surgelés, frais, ambiants) en une journée.\nLe problème a été formalisé en programmation linéaire (PLNE) et résolu sous IBM CPLEX pour les petites instances, puis une heuristique ALNS a été développée pour les instances trop volumineuses.\nLes solutions obtenues sont proches de l'optimum théorique tout en respectant toutes les contraintes opérationnelles.",
+    "competences": "Logistique · Optimisation · Python · ALNS · IBM CPLEX",
+    "medias": [
+      { "type": "image", "src": "img/Projets/alns1.png" },
+      { "type": "image", "src": "img/Projets/alns2.png" },
+      { "type": "image", "src": "img/Projets/alns3.png" },
+      { "type": "image", "src": "img/Projets/alns4.png" },
+      { "type": "image", "src": "img/Projets/alns5.png" },
+      { "type": "image", "src": "img/Projets/alns6.png" },
+      { "type": "image", "src": "img/Projets/alns7.png" },
+      { "type": "image", "src": "img/Projets/alns8.png" }
+    ]
+  },
+  {
+    "id": "agridata-faostat",
+    "categorie": "perso",
+    "titre": "AgriData Explorer",
+    "associe": "Projet personnel (Données FAO)",
+    "description": "Application web de data visualisation permettant d'explorer les données agricoles mondiales de la FAO (FAOSTAT).\nJ'ai modélisé la base de données SQLite, développé une API Flask et construit une interface interactive avec filtres dynamiques (pays, culture, période) et graphiques Chart.js mis à jour en AJAX sans rechargement de page.\nL'outil permet de comparer la production agricole et les rendements par pays sur plusieurs décennies.",
+    "competences": "Data Modeling · Python · SQLite · FAOSTAT · Data Visualisation · API · AJAX · Chart.js",
+    "medias": [
+      { "type": "image", "src": "img/Projets/agri1.png" },
+      { "type": "image", "src": "img/Projets/agri2.png" },
+      { "type": "image", "src": "img/Projets/agri3.jpg" }
+    ],
+    "lien": "/projets/agridataexplorer"
+  },
+  {
+    "id": "accent-audio-classification",
+    "categorie": "perso",
+    "titre": "Classification d'accents anglais par machine learning",
+    "description": "Collecte et traitement de fichiers audio issus de YouTube (podcasts, conférences) pour entraîner un modèle de classification d'accents anglophones.\nJ'ai extrait des caractéristiques audio (MFCC, Chroma, Spectral Contrast, Tonnetz) puis comparé plusieurs algorithmes supervisés (Random Forest, CART, AdaBoost, XGBoost).\nLe meilleur modèle atteint 78% de précision pour distinguer les accents américain, britannique et indien.",
+    "competences": "Python · Scikit-learn · Librosa · Machine Learning",
+    "medias": [
+      { "type": "image", "src": "img/Projets/a1.png" },
+      { "type": "image", "src": "img/Projets/a2.png" },
+      { "type": "image", "src": "img/Projets/a3.png" },
+      { "type": "image", "src": "img/Projets/a4.png" },
+      { "type": "image", "src": "img/Projets/a5.png" }
+    ]
+  },
+  {
+    "id": "sentiment-analysis-incremental",
+    "categorie": "academique",
+    "titre": "Analyse de sentiments avec apprentissage incrémental",
+    "associe": "Université de Lorraine – LCOMS",
+    "description": "Développement d'un système d'analyse de sentiments capable de se mettre à jour en continu sans réentraînement complet.\nJ'ai implémenté et comparé plusieurs modèles NLP (SVM, Naive Bayes), puis conçu un mécanisme d'apprentissage incrémental permettant d'intégrer de nouvelles données au fil de l'eau.\nLe système a été déployé dans une interface tactile (AIRxTOUCH) où l'utilisateur corrige les prédictions en temps réel, alimentant directement le modèle.",
+    "competences": "Python · NLP · SVM · Scikit-learn · Apprentissage incrémental · Interfaces tactiles",
+    "medias": [
+      { "type": "image", "src": "img/Projets/as1.png" },
+      { "type": "image", "src": "img/Projets/as2.png" },
+      { "type": "image", "src": "img/Projets/as3.png" },
+      { "type": "image", "src": "img/Projets/as4.png" }
+    ]
+  },
+  {
+    "id": "dashboard-healthcare",
+    "categorie": "perso",
+    "titre": "Dashboard Power BI – Secteur Santé",
+    "associe": "Projet personnel",
+    "description": "Conception d'un tableau de bord de suivi de la performance financière d'un centre de santé et de ses prestataires.\nJ'ai modélisé les données avec Power Query, créé les mesures DAX nécessaires et soigné la mise en page pour un rendu professionnel.\nCe projet m'a permis de consolider mes compétences en modélisation sémantique et en storytelling visuel avec Power BI.",
+    "competences": "Power BI · DAX · Power Query · Reporting",
+    "medias": [
+      { "type": "image", "src": "img/Projets/h1-1.png" }
+    ],
+    "lien": "https://app.powerbi.com/view?r=eyJrIjoiYzFkNDE2ZTEtMzc5Yy00MzBkLWEyMjYtZjFhMGQ1ODdkYmQ1IiwidCI6IjE1ODcxNmNmLTQ2YjktNDhjYS04YzQ5LWM3YmI2N2U1NzVmMyIsImMiOjh9"
+  },
+  {
+    "id": "dgpre-eau",
+    "categorie": "pro",
+    "titre": "Suivi intelligent des ressources en eau au Sénégal",
+    "associe": "ProSE SARL / DGPRE",
+    "description": "Développement d'un système de télémétrie pour remplacer les campagnes manuelles de relevé des niveaux d'eau dans les stations hydrologiques du Sénégal.\nArchitecture complète : collecte via LevelSender + Levelogger, stockage SQLite, API Flask, et interface web avec cartographie interactive (Leaflet.js) et graphiques temps réel (Highcharts).\nLe système inclut un module d'alertes automatiques et un CRUD pour la gestion des stations, livré à la DGPRE.",
+    "competences": "Python · Flask · JavaScript · Leaflet.js · Highcharts · SQLite · UML · Dashboard · Télémétrie",
+    "medias": [
+      { "type": "image", "src": "img/Projets/s2.png" },
+      { "type": "image", "src": "img/Projets/s3.png" },
+      { "type": "image", "src": "img/Projets/s1.png" },
+      { "type": "image", "src": "img/Projets/s4.png" },
+      { "type": "image", "src": "img/Projets/s5.png" },
+      { "type": "image", "src": "img/Projets/s6.png" },
+      { "type": "image", "src": "img/Projets/s7.png" }
+    ]
+  }
+]

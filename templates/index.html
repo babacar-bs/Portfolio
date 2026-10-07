@@ -28,7 +28,7 @@
       <li><a href="#contact" data-t="nav_contact">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="lang-btn" id="langToggle" aria-label="Changer la langue">FR/EN</button>
+      <!-- <button class="lang-btn" id="langToggle" aria-label="Changer la langue">FR/EN</button> -->
       <button class="theme-btn" id="themeToggle" aria-label="Changer le thème">○</button>
       <a href="{{ url_for('static', filename='cv_babacar_sarr.pdf') }}" download class="nav-cv" data-t="hero_cta2">CV ↓</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -53,12 +53,17 @@
     <h1 class="hero-name">
       <span id="typewriter"></span><span class="cursor">|</span>
     </h1>
-    <p class="hero-desc" data-t="hero_desc">
+    <!-- <p class="hero-desc" data-t="hero_desc">
       Architectures de données de bout en bout — pipelines ETL, cloud GCP, dashboards Power BI et Looker. Disponible pour CDI, CDD ou mission freelance.
+    </p> -->
+    <p class="hero-desc" data-t="hero_desc">
+     Mon objectif : Transformer les besoins métiers en solutions concrètes en structurant, analysant et modélisant les données pour aider les équipes à prendre de meilleures décisions.
+      >Mon profil combine l'ingénierie des données, l'IA, le développement et la restitution métier, ce qui me permet de travailler aussi bien avec des équipes techniques que non techniques.
+  </br> Disponible pour de nouvelles opportunités.
     </p>
     <div class="hero-btns">
       <a href="#projets" class="btn-main" data-t="hero_cta1">Voir mes projets</a>
-      <a href="{{ url_for('static', filename='cv_babacar_sarr.pdf') }}" download class="btn-ghost" data-t="hero_cta2">Télécharger le CV</a>
+      <!-- <a href="{{ url_for('static', filename='cv_babacar_sarr.pdf') }}" download class="btn-ghost" data-t="hero_cta2">Télécharger le CV</a> -->
     </div>
   </div>
 </section>
@@ -73,18 +78,26 @@
         <div class="col-label" data-t="nav_exp">Expériences</div>
 
         <div class="exp-item reveal">
+          <span class="exp-date">Déc. 2025 – Aujourd'hui</span>
+          <h3 class="exp-role" data-t="exp2_role">Data Scientist</h3>
+          <p class="exp-org">LCOMS — Université de Lorraine · Metz</p>
+          <p class="exp-desc" data-t="exp2_desc">Optimisation de modèles d'inteligence artificielle dans le cadre d'un projet tutoré.</p>
+          <div class="exp-tags"><span>Python</span><span>NLP</span><span>Scikit-learn</span></div>
+        </div>
+
+        <div class="exp-item reveal">
           <span class="exp-date">Mars – Sept. 2025</span>
           <h3 class="exp-role">Data Engineer / BI Developer</h3>
           <p class="exp-org">IM-PACT · Clermont-Ferrand &amp; Lyon</p>
-          <p class="exp-desc" data-t="exp1_desc">Automatisation de la vérification des permis de construire (10 mois → quelques minutes), connecteurs d'ingestion, agent LLM, dashboards Power BI.</p>
+          <p class="exp-desc" data-t="exp1_desc">Mise en place de solutions de Business Intelligence pour le secteur du génie civil.</p>
           <div class="exp-tags"><span>Python</span><span>Power BI</span><span>LLM</span><span>GCP</span></div>
         </div>
 
         <div class="exp-item reveal">
           <span class="exp-date">Déc. 2023 – Mai 2024</span>
-          <h3 class="exp-role" data-t="exp2_role">Chercheur Data Science</h3>
+          <h3 class="exp-role" data-t="exp2_role">Data Scientist</h3>
           <p class="exp-org">LCOMS — Université de Lorraine · Metz</p>
-          <p class="exp-desc" data-t="exp2_desc">Apprentissage incrémental pour la classification de sentiments sur données réelles issues de réseaux sociaux.</p>
+          <p class="exp-desc" data-t="exp2_desc">Optimisation de modèles d'inteligence artificielle dans le cadre d'un projet tutoré.</p>
           <div class="exp-tags"><span>Python</span><span>NLP</span><span>Scikit-learn</span></div>
         </div>
 
@@ -92,7 +105,7 @@
           <span class="exp-date">Juin – Août 2021</span>
           <h3 class="exp-role" data-t="exp3_role">Développeur Full Stack</h3>
           <p class="exp-org">ProSE SARL · Dakar, Sénégal</p>
-          <p class="exp-desc" data-t="exp3_desc">Système de suivi hydrologique temps réel pour la DGPRE — cartographie interactive et alertes automatiques.</p>
+          <p class="exp-desc" data-t="exp3_desc">Développement d'un système de suivi en temps réel des débits et niveaux d’eau pour anticiper et prévenir les phénomènes liés à leur variation.</p>
           <div class="exp-tags"><span>Flask</span><span>Leaflet.js</span><span>SQLite</span></div>
         </div>
       </div>
@@ -102,24 +115,32 @@
         <div class="col-label" data-t="stack_title">Stack technique</div>
         <div class="stack-list">
           <div class="stack-row reveal">
-            <span class="stack-cat" data-t="stack_1">Pipeline &amp; ETL</span>
-            <span class="stack-vals">Python · Airflow · dbt · Talend · Luigi</span>
+            <span class="stack-cat" data-t="stack_1">Langages de programmation</span>
+            <span class="stack-vals">Python · SQL · Java · Javascript · R · C</span>
           </div>
           <div class="stack-row reveal">
-            <span class="stack-cat" data-t="stack_2">Cloud &amp; Stockage</span>
-            <span class="stack-vals">GCP · BigQuery · Snowflake · PostgreSQL · Oracle</span>
+            <span class="stack-cat" data-t="stack_2">BI &amp; Reporting</span>
+            <span class="stack-vals">Power BI · Looker · Google Analytics · Excel</span>
           </div>
           <div class="stack-row reveal">
             <span class="stack-cat" data-t="stack_3">Visualisation</span>
             <span class="stack-vals">Power BI · Looker · Chart.js · Google Analytics</span>
           </div>
           <div class="stack-row reveal">
-            <span class="stack-cat" data-t="stack_4">ML &amp; Analyse</span>
-            <span class="stack-vals">Scikit-learn · Spark · NLP · LLM · R</span>
+            <span class="stack-cat" data-t="stack_4">Data Engineering</span>
+            <span class="stack-vals">Talend · dbt · Snowflake · BigQuery · Airflow · Modélisation multidimensionnelle</span>
           </div>
           <div class="stack-row reveal">
-            <span class="stack-cat" data-t="stack_5">Développement</span>
-            <span class="stack-vals">Flask · SQL · JavaScript · Golang · Git</span>
+            <span class="stack-cat" data-t="stack_5">BD &amp; Cloud</span>
+            <span class="stack-vals">PostgreSQL · MySQL · Oracle · Azure · GCP</span>
+          </div>
+           <div class="stack-row reveal">
+            <span class="stack-cat" data-t="stack_5">IA &amp; Analyse</span>
+            <span class="stack-vals"> Scikit Learn · ML · DL · NLP · LLM</span>
+          </div>
+           <div class="stack-row reveal">
+            <span class="stack-cat" data-t="stack_5">Outils &amp; Methodologie</span>
+            <span class="stack-vals">GIT · CI/CD · Jira · Agile</span>
           </div>
         </div>
       </div>
@@ -140,21 +161,21 @@
         <div class="form-item reveal">
           <span class="form-date">2023 – 2025</span>
           <div>
-            <h3 class="form-name" data-t="edu1">Master — Systèmes d'Information Décisionnelle</h3>
+            <h3 class="form-name" data-t="edu1">Master en Systèmes d'Information Décisionnelle</h3>
             <p class="form-school">Université de Lorraine · Metz, France</p>
           </div>
         </div>
         <div class="form-item reveal">
           <span class="form-date">2021 – 2023</span>
           <div>
-            <h3 class="form-name" data-t="edu2">Licence — Informatique</h3>
+            <h3 class="form-name" data-t="edu2">Licence en Informatique</h3>
             <p class="form-school">Université Clermont Auvergne · Clermont-Ferrand</p>
           </div>
         </div>
         <div class="form-item reveal">
           <span class="form-date">2019 – 2021</span>
           <div>
-            <h3 class="form-name" data-t="edu3">DUT — Informatique</h3>
+            <h3 class="form-name" data-t="edu3">DUT en Informatique</h3>
             <p class="form-school">École Supérieure Polytechnique · Dakar, Sénégal</p>
           </div>
         </div>
@@ -270,9 +291,9 @@
         <span class="cl-icon">in</span>linkedin.com/in/babacar-s
       </a>
       <a href="{{ url_for('static', filename='cv_babacar_sarr.pdf') }}" download class="contact-link">
-        <span class="cl-icon">↓</span><span data-t="hero_cta2">Télécharger le CV PDF</span>
+        <!-- <span class="cl-icon">↓</span><span data-t="hero_cta2">Télécharger le CV PDF</span> -->
       </a>
-      <p class="github-note" data-t="github_note">Code disponible sur demande — GitHub privé</p>
+      <p class="github-note" data-t="github_note">Codes disponibles sur demande, GitHub privé</p>
     </div>
   </div>
 </section>
@@ -280,8 +301,8 @@
 <!-- ── FOOTER ── -->
 <footer class="footer">
   <div class="container footer-inner">
-    <span>© 2026 Babacar SARR</span>
-    <span>Flask · Python · GCP</span>
+    <span>© 2025 Babacar SARR</span>
+    <!-- <span>Flask · Python · GCP</span> -->
   </div>
 </footer>
 

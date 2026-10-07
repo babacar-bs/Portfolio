@@ -1,1 +1,601 @@
 
+<!DOCTYPE html>
+<html lang="fr" data-theme="light" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Babacar SARR – Data Engineer & BI Developer. Pipelines de données, dashboards, architecture cloud." />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/log.ico') }}" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/indexx.css') }}" />
+  <title>Babacar SARR — Data Engineer</title>
+</head>
+<body>
+
+<!-- ── SCROLL INDICATOR ── -->
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- ── NAV ── -->
+<header id="header">
+  <nav class="nav-inner">
+    <a href="/" class="nav-logo">BS</a>
+    <ul class="nav-links">
+      <li><a href="#experiences" data-t="nav_exp">Expériences</a></li>
+      <li><a href="#formations" data-t="nav_form">Formations</a></li>
+      <li><a href="#projets" data-t="nav_proj">Projets</a></li>
+      <li><a href="#contact" data-t="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle" aria-label="Changer la langue">FR/EN</button>
+      <button class="theme-btn" id="themeToggle" aria-label="Changer le thème">○</button>
+      <a href="{{ url_for('static', filename='cv_babacar_sarr.pdf') }}" download class="nav-cv" data-t="hero_cta2">CV ↓</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#experiences" class="mm-link" data-t="nav_exp">Expériences</a>
+    <a href="#formations" class="mm-link" data-t="nav_form">Formations</a>
+    <a href="#projets" class="mm-link" data-t="nav_proj">Projets</a>
+    <a href="#contact" class="mm-link" data-t="nav_contact">Contact</a>
+    <!-- <a href="{{ url_for('static', filename='cv_babacar_sarr.pdf') }}" download class="mm-link" data-t="hero_cta2">CV indisponible</a> -->
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+  <canvas id="bgCanvas"></canvas>
+  <div class="container hero-inner">
+    <div class="hero-badge" data-t="hero_role">DATA ENGINEER &amp; BI DEVELOPER</div>
+    <h1 class="hero-name">
+      <span id="typewriter"></span><span class="cursor">|</span>
+    </h1>
+    <p class="hero-desc" data-t="hero_desc">
+      Mon objectif : transformer les besoins métiers en solutions concrètes en structurant, analysant et modélisant les données pour aider les équipes à prendre de meilleures décisions. Disponible pour de nouvelles opportunités.
+    </p>
+    <div class="hero-btns">
+      <a href="#projets" class="btn-main" data-t="hero_cta1">Voir mes projets</a>
+      <!-- <a href="{{ url_for('static', filename='cv_babacar_sarr.pdf') }}" download class="btn-ghost" data-t="hero_cta2">Télécharger le CV</a> -->
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPÉRIENCES + STACK ── -->
+<section class="section two-col" id="experiences">
+  <div class="container">
+    <div class="grid-2">
+
+      <!-- Expériences -->
+      <div class="col-block">
+        <div class="col-label" data-t="nav_exp">Expériences</div>
+
+        <div class="exp-item reveal">
+          <span class="exp-date">Mars – Sept. 2025</span>
+          <h3 class="exp-role">Data Engineer</h3>
+          <p class="exp-org">Freelance · Clermont-Ferrand</p>
+          <p class="exp-desc" data-t="exp1_desc">Traduction des besoins métiers afin de concevoir des plateformes web, des agents IA, des solutions de reporting et d'automatisation.</p>
+          <!-- <div class="exp-tags"><span>Python</span><span>Power BI</span><span>LLM</span><span>GCP</span></div> -->
+        </div>
+
+        <div class="exp-item reveal">
+          <span class="exp-date">Mars – Sept. 2025</span>
+          <h3 class="exp-role">Data Engineer &amp; Analyst</h3>
+          <p class="exp-org">IM-PACT · Clermont-Ferrand &amp; Lyon</p>
+          <p class="exp-desc" data-t="exp1_desc">Mise en place de solutions de Business Intelligence pour le secteur du génie civil.</p>
+          <!-- <div class="exp-tags"><span>Python</span><span>Power BI</span><span>LLM</span><span>GCP</span></div> -->
+        </div>
+
+        <div class="exp-item reveal">
+          <span class="exp-date">Déc. 2023 – Mai 2024</span>
+          <h3 class="exp-role" data-t="exp2_role">Data Scientist</h3>
+          <p class="exp-org">LCOMS — Université de Lorraine · Metz</p>
+          <p class="exp-desc" data-t="exp2_desc">Optimisation de modèles d'inteligence artificielle dans le cadre d'un projet tutoré.</p>
+          <!-- <div class="exp-tags"><span>Python</span><span>NLP</span><span>Scikit-learn</span></div> -->
+        </div>
+
+        <div class="exp-item reveal">
+          <span class="exp-date">Juin – Août 2021</span>
+          <h3 class="exp-role" data-t="exp3_role">Développeur Data</h3>
+          <p class="exp-org">ProSE SARL · Dakar, Sénégal</p>
+          <p class="exp-desc" data-t="exp3_desc">Développement d'un système de suivi en temps réel des débits et niveaux d’eau pour anticiper et prévenir les phénomènes liés à leur variation.</p>
+          <!-- <div class="exp-tags"><span>Flask</span><span>Leaflet.js</span><span>SQLite</span></div> -->
+        </div>
+      </div>
+
+      <!-- Stack -->
+      <div class="col-block col-border">
+        <div class="col-label" data-t="stack_title">Stack technique</div>
+        <div class="stack-list">
+           <div class="stack-row reveal">
+            <span class="stack-cat" data-t="stack_1">Langages de programmation</span>
+            <span class="stack-vals">Python · SQL · Java · Javascript · R · C</span>
+          </div>
+          <div class="stack-row reveal">
+            <span class="stack-cat" data-t="stack_2">BI &amp; Reporting</span>
+            <span class="stack-vals">Power BI · Looker · Google Analytics · Excel</span>
+          </div>
+          <div class="stack-row reveal">
+            <span class="stack-cat" data-t="stack_3">Visualisation</span>
+            <span class="stack-vals">Power BI · Looker · Chart.js · Google Analytics</span>
+          </div>
+          <div class="stack-row reveal">
+            <span class="stack-cat" data-t="stack_4">Data Engineering</span>
+            <span class="stack-vals">Talend · dbt · Snowflake · BigQuery · Airflow · Modélisation multidimensionnelle</span>
+          </div>
+          <div class="stack-row reveal">
+            <span class="stack-cat" data-t="stack_5">BD &amp; Cloud</span>
+            <span class="stack-vals">PostgreSQL · MySQL · Oracle · Azure · GCP</span>
+          </div>
+           <div class="stack-row reveal">
+            <span class="stack-cat" data-t="stack_5">IA &amp; Analyse</span>
+            <span class="stack-vals"> Scikit Learn · ML · DL · NLP · LLM</span>
+          </div>
+           <div class="stack-row reveal">
+            <span class="stack-cat" data-t="stack_5">Outils &amp; Methodologie</span>
+            <span class="stack-vals">GIT · CI/CD · Jira · Agile</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FORMATIONS + CERTIFICATIONS ── -->
+<section class="section two-col section-alt" id="formations">
+  <div class="container">
+    <div class="grid-2">
+
+      <!-- Formations -->
+      <div class="col-block">
+        <div class="col-label" data-t="nav_form">Formations</div>
+
+        <div class="form-item reveal">
+          <span class="form-date">2023 – 2025</span>
+          <div>
+            <h3 class="form-name" data-t="edu1">Master en Systèmes d'Information Décisionnelle</h3>
+            <p class="form-school">Université de Lorraine · Metz, France</p>
+          </div>
+        </div>
+        <div class="form-item reveal">
+          <span class="form-date">2021 – 2023</span>
+          <div>
+            <h3 class="form-name" data-t="edu2">Licence en Informatique</h3>
+            <p class="form-school">Université Clermont Auvergne · Clermont-Ferrand</p>
+          </div>
+        </div>
+        <div class="form-item reveal">
+          <span class="form-date">2019 – 2021</span>
+          <div>
+            <h3 class="form-name" data-t="edu3">DUT en Informatique</h3>
+            <p class="form-school">École Supérieure Polytechnique · Dakar, Sénégal</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="col-block col-border">
+        <div class="col-label" data-t="cert_title">Certifications</div>
+        <div class="cert-list">
+          {% for cert in certifications %}
+          <div class="cert-item reveal">
+            <img src="{{ url_for('static', filename=cert.logo) }}" alt="{{ cert.name }}" loading="lazy" />
+            <span class="cert-name">{{ cert.name }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJETS ACCORDÉON ── -->
+<section class="section" id="projets">
+  <div class="container">
+    <div class="section-hd">
+      <div class="col-label" data-t="nav_proj">Projets</div>
+      <span class="proj-count">{{ projets|length }}&nbsp;<span data-t="proj_count">projets</span></span>
+    </div>
+
+    <div class="acc-list">
+      {% for projet in projets %}
+      <div class="acc-item reveal" id="acc-{{ projet.id }}">
+
+        <button class="acc-trigger" onclick="toggleAcc('{{ projet.id }}')" aria-expanded="false">
+          <div class="acc-thumb">
+            <img src="{{ url_for('static', filename=projet.medias[0].src) }}"
+                 alt="{{ projet.titre }}" loading="lazy" />
+          </div>
+          <div class="acc-summary">
+            <div class="acc-meta">
+              <span class="acc-cat cat-{{ projet.categorie | default('academique') }}">{{ projet.categorie | default('academique') }}</span>
+              {% if projet.associe %}<span class="acc-assoc">{{ projet.associe }}</span>{% endif %}
+            </div>
+            <h3 class="acc-title">{{ projet.titre }}</h3>
+            <div class="acc-preview-tags">
+              {% for t in projet.competences.split(' · ')[:4] %}
+              <span>{{ t }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          <span class="acc-icon" id="icon-{{ projet.id }}">+</span>
+        </button>
+
+        <div class="acc-body" id="body-{{ projet.id }}" hidden>
+          <div class="acc-body-inner">
+
+            <!-- Galerie lightbox -->
+            <div class="acc-gallery">
+              {% for media in projet.medias %}
+              <a href="{{ url_for('static', filename=media.src) }}"
+                 class="glb-{{ projet.id }}"
+                 data-gallery="g{{ projet.id }}"
+                 {% if media.type == 'video' %}data-type="video"{% endif %}>
+                <img src="{{ url_for('static', filename=media.src) }}"
+                     alt="{{ projet.titre }}" loading="lazy" />
+              </a>
+              {% endfor %}
+            </div>
+
+            <!-- Détails -->
+            <div class="acc-details">
+              <ul class="acc-bullets">
+                {% for line in projet.description.split('\n') %}
+                  {% if line.strip() %}<li>{{ line.strip() }}</li>{% endif %}
+                {% endfor %}
+              </ul>
+              <div class="acc-all-tags">
+                {% for t in projet.competences.split(' · ') %}
+                <span>{{ t }}</span>
+                {% endfor %}
+              </div>
+              <div class="acc-actions">
+                {% if projet.lien %}
+                <a href="{{ projet.lien }}" target="_blank" rel="noopener" class="acc-link" data-t="proj_see">Voir en ligne ↗</a>
+                {% endif %}
+                <button class="acc-link" onclick="document.querySelector('.glb-{{ projet.id }}').click()" data-t="proj_gallery">Galerie ↗</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="section section-alt" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-left">
+      <div class="col-label" data-t="nav_contact">Contact</div>
+      <h2 class="contact-title" data-t="contact_title">Travaillons<br>ensemble.</h2>
+      <p class="contact-sub" data-t="contact_sub">Disponible pour CDI, CDD ou mission freelance.</p>
+    </div>
+    <div class="contact-right">
+      <a href="mailto:b26.sarr@gmail.com" class="contact-link">
+        <span class="cl-icon">✉</span>b26.sarr@gmail.com
+      </a>
+      <a href="https://linkedin.com/in/babacar-s" target="_blank" rel="noopener" class="contact-link">
+        <span class="cl-icon">in</span>linkedin.com/in/babacar-s
+      </a>
+      <a href="{{ url_for('static', filename='cv_babacar_sarr.pdf') }}" download class="contact-link">
+        <!-- <span class="cl-icon">↓</span><span data-t="hero_cta2">Télécharger le CV PDF</span> -->
+      </a>
+      <p class="github-note" data-t="github_note">Codes disponibles sur demande, GitHub privé</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© 2025 Babacar SARR</span>
+    <span>Data Engineer</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+/* ══════════════════════════════
+   TRADUCTIONS
+══════════════════════════════ */
+const T = {
+  fr: {
+    nav_exp:       "Expériences",
+    nav_form:      "Formations",
+    nav_proj:      "Projets",
+    nav_contact:   "Contact",
+    hero_dispo:    "Disponible — Oct. 2026",
+    hero_loc:      "Lyon, France",
+    hero_role:     "Data Engineer &amp; BI Developer",
+    hero_desc:     "Architectures de données de bout en bout — pipelines ETL, cloud GCP, dashboards Power BI et Looker. Disponible pour CDI, CDD ou mission freelance.",
+    hero_cta1:     "Voir mes projets",
+    hero_cta2:     "Télécharger le CV",
+    exp1_desc:     "Automatisation de la vérification des permis de construire (10 mois → quelques minutes), connecteurs d'ingestion, agent LLM, dashboards Power BI.",
+    exp2_role:     "Chercheur Data Science",
+    exp2_desc:     "Apprentissage incrémental pour la classification de sentiments sur données réelles issues de réseaux sociaux.",
+    exp3_role:     "Développeur Full Stack",
+    exp3_desc:     "Système de suivi hydrologique temps réel pour la DGPRE — cartographie interactive et alertes automatiques.",
+    stack_title:   "Stack technique",
+    stack_1:       "Pipeline &amp; ETL",
+    stack_2:       "Cloud &amp; Stockage",
+    stack_3:       "Visualisation",
+    stack_4:       "ML &amp; Analyse",
+    stack_5:       "Développement",
+    edu1:          "Master — Systèmes d'Information Décisionnelle",
+    edu2:          "Licence — Informatique",
+    edu3:          "DUT — Informatique",
+    cert_title:    "Certifications",
+    proj_count:    "projets",
+    proj_see:      "Voir en ligne ↗",
+    proj_gallery:  "Galerie ↗",
+    contact_title: "Travaillons<br>ensemble.",
+    contact_sub:   "Disponible pour CDI, CDD ou mission freelance.",
+    github_note:   "Code disponible sur demande — GitHub privé",
+  },
+  en: {
+    nav_exp:       "Experience",
+    nav_form:      "Education",
+    nav_proj:      "Projects",
+    nav_contact:   "Contact",
+    hero_dispo:    "Available — Oct. 2026",
+    hero_loc:      "Lyon, France",
+    hero_role:     "Data Engineer &amp; BI Developer",
+    hero_desc:     "End-to-end data architectures — reliable ETL pipelines, GCP cloud, Power BI and Looker dashboards. Open to full-time, contract or freelance roles.",
+    hero_cta1:     "View my projects",
+    hero_cta2:     "Download Resume",
+    exp1_desc:     "Automated building permit verification (10 months → minutes), data ingestion connectors, LLM agent, Power BI dashboards.",
+    exp2_role:     "Data Science Researcher",
+    exp2_desc:     "Incremental learning for sentiment classification on real-world social media data.",
+    exp3_role:     "Full Stack Developer",
+    exp3_desc:     "Real-time hydrological monitoring system for DGPRE — interactive mapping and automatic alerts.",
+    stack_title:   "Tech Stack",
+    stack_1:       "Pipeline &amp; ETL",
+    stack_2:       "Cloud &amp; Storage",
+    stack_3:       "Visualization",
+    stack_4:       "ML &amp; Analysis",
+    stack_5:       "Development",
+    edu1:          "Master's — Decision Information Systems",
+    edu2:          "Bachelor's — Computer Science",
+    edu3:          "HND — Computer Science",
+    cert_title:    "Certifications",
+    proj_count:    "projects",
+    proj_see:      "View online ↗",
+    proj_gallery:  "Gallery ↗",
+    contact_title: "Let's work<br>together.",
+    contact_sub:   "Open to full-time, contract or freelance roles.",
+    github_note:   "Code available on request — private GitHub",
+  }
+};
+
+function applyLang(lang) {
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const k = el.getAttribute('data-t');
+    if (T[lang][k] !== undefined) el.innerHTML = T[lang][k];
+  });
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('data-lang', lang);
+  localStorage.setItem('bs-lang', lang);
+  document.getElementById('langToggle').textContent = lang === 'fr' ? 'EN' : 'FR';
+}
+
+/* ══════════════════════════════
+   DARK MODE
+══════════════════════════════ */
+const html = document.documentElement;
+const themeBtn = document.getElementById('themeToggle');
+
+function applyTheme(t) {
+  html.setAttribute('data-theme', t);
+  localStorage.setItem('bs-theme', t);
+  themeBtn.textContent = t === 'light' ? '●' : '○';
+}
+applyTheme(localStorage.getItem('bs-theme') || 'light');
+themeBtn.addEventListener('click', () =>
+  applyTheme(html.getAttribute('data-theme') === 'light' ? 'dark' : 'light')
+);
+
+/* ══════════════════════════════
+   INIT LANGUE
+══════════════════════════════ */
+applyLang(localStorage.getItem('bs-lang') || 'fr');
+document.getElementById('langToggle').addEventListener('click', () => {
+  const next = html.getAttribute('data-lang') === 'fr' ? 'en' : 'fr';
+  applyLang(next);
+  startTypewriter();
+});
+
+/* ══════════════════════════════
+   HAMBURGER
+══════════════════════════════ */
+const burger = document.getElementById('hamburger');
+const mmenu  = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => {
+  mmenu.classList.toggle('open');
+  burger.classList.toggle('open');
+});
+document.querySelectorAll('.mm-link').forEach(l => l.addEventListener('click', () => {
+  mmenu.classList.remove('open');
+  burger.classList.remove('open');
+}));
+
+/* ══════════════════════════════
+   SCROLL
+══════════════════════════════ */
+const scrollBar = document.getElementById('scrollBar');
+window.addEventListener('scroll', () => {
+  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+  scrollBar.style.width = pct + '%';
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 40);
+  // active nav
+  document.querySelectorAll('section[id]').forEach(s => {
+    const a = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+    if (!a) return;
+    const inView = window.scrollY >= s.offsetTop - 120 && window.scrollY < s.offsetTop + s.offsetHeight - 120;
+    a.classList.toggle('active', inView);
+  });
+}, { passive: true });
+
+/* ══════════════════════════════
+   TYPEWRITER
+══════════════════════════════ */
+function startTypewriter() {
+  const el = document.getElementById('typewriter');
+  el.textContent = '';
+  const text = 'Babacar Sarr.';
+  let i = 0;
+  clearInterval(window._tw);
+  window._tw = setInterval(() => {
+    if (i < text.length) el.textContent += text[i++];
+    else clearInterval(window._tw);
+  }, 75);
+}
+startTypewriter();
+
+/* ══════════════════════════════
+   ACCORDÉON
+══════════════════════════════ */
+function toggleAcc(id) {
+  const body    = document.getElementById('body-' + id);
+  const icon    = document.getElementById('icon-' + id);
+  const trigger = body.previousElementSibling;
+  const isOpen  = !body.hidden;
+
+  // fermer tous
+  document.querySelectorAll('.acc-body').forEach(b => { b.hidden = true; });
+  document.querySelectorAll('.acc-icon').forEach(i => { i.textContent = '+'; });
+  document.querySelectorAll('.acc-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'));
+
+  if (!isOpen) {
+    body.hidden = false;
+    icon.textContent = '−';
+    trigger.setAttribute('aria-expanded', 'true');
+    // scroll doux vers l'item
+    setTimeout(() => body.closest('.acc-item').scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+  }
+}
+
+/* ══════════════════════════════
+   GLIGHTBOX
+══════════════════════════════ */
+{% for projet in projets %}
+GLightbox({ selector: '.glb-{{ projet.id }}', touchNavigation: true });
+{% endfor %}
+
+/* ══════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════ */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('revealed'); revealObs.unobserve(e.target); }
+  });
+}, { threshold: 0.07 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* ══════════════════════════════
+   CANVAS BACKGROUND (nodes)
+══════════════════════════════ */
+(function() {
+  const canvas = document.getElementById('bgCanvas');
+  const ctx    = canvas.getContext('2d');
+  const SENSE  = 100, SIBLINGS = 10, DENSITY = 60, ANCHOR = 20, MRADIUS = 180;
+  let nodes = [], qty = 0;
+  const mouse = { x: -9999, y: -9999 };
+
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+  window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
+
+  function Node(x, y) {
+    this.ax = x; this.ay = y;
+    this.x = x + (Math.random() - 0.5) * ANCHOR * 2;
+    this.y = y + (Math.random() - 0.5) * ANCHOR * 2;
+    this.vx = Math.random() * 2 - 1;
+    this.vy = Math.random() * 2 - 1;
+    this.energy = Math.random() * 100;
+    this.radius = Math.random();
+    this.siblings = [];
+    this.bright = 0;
+  }
+  Node.prototype.move = function() {
+    this.energy -= 2;
+    if (this.energy < 1) {
+      this.energy = Math.random() * 100;
+      this.vx = this.x - this.ax < -ANCHOR ? Math.random() * 2 : this.x - this.ax > ANCHOR ? Math.random() * -2 : Math.random() * 4 - 2;
+      this.vy = this.y - this.ay < -ANCHOR ? Math.random() * 2 : this.y - this.ay > ANCHOR ? Math.random() * -2 : Math.random() * 4 - 2;
+    }
+    this.x += this.vx * this.energy / 100;
+    this.y += this.vy * this.energy / 100;
+  };
+
+  function dist(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
+
+  function init() {
+    nodes = []; qty = 0;
+    for (let i = DENSITY; i < canvas.width; i += DENSITY)
+      for (let j = DENSITY; j < canvas.height; j += DENSITY)
+        { nodes.push(new Node(i, j)); qty++; }
+  }
+
+  function getAccent() {
+    return html.getAttribute('data-theme') === 'dark' ? 'rgba(232,90,58,' : 'rgba(200,50,26,';
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // find siblings
+    for (let i = 0; i < qty; i++) {
+      const n = nodes[i]; n.siblings = [];
+      for (let j = 0; j < qty; j++) {
+        const m = nodes[j];
+        if (n === m) continue;
+        const d = dist(n, m);
+        if (d < SENSE) {
+          if (n.siblings.length < SIBLINGS) { n.siblings.push(m); }
+          else {
+            let maxD = 0, si = 0;
+            for (let k = 0; k < SIBLINGS; k++) { const sd = dist(n, n.siblings[k]); if (sd > maxD) { maxD = sd; si = k; } }
+            if (d < maxD) { n.siblings.splice(si, 1); n.siblings.push(m); }
+          }
+        }
+      }
+    }
+    const acc = getAccent();
+    for (let i = 0; i < qty; i++) {
+      const n = nodes[i];
+      const d = dist(mouse, n);
+      n.bright = d < MRADIUS ? 1 - d / MRADIUS : 0;
+    }
+    for (let i = 0; i < qty; i++) {
+      const n = nodes[i];
+      if (n.bright) {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, 2 * n.radius + 2 * n.siblings.length / SIBLINGS, 0, Math.PI * 2);
+        ctx.fillStyle = acc + n.bright + ')';
+        ctx.fill();
+        n.siblings.forEach(s => {
+          ctx.beginPath();
+          ctx.moveTo(n.x, n.y); ctx.lineTo(s.x, s.y);
+          ctx.lineWidth = 1 - dist(n, s) / SENSE;
+          ctx.strokeStyle = acc + n.bright + ')';
+          ctx.stroke();
+        });
+      }
+      n.move();
+    }
+    requestAnimationFrame(draw);
+  }
+  init(); draw();
+})();
+</script>
+</body>
+</html>
